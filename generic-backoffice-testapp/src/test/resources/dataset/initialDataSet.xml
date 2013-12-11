@@ -1,0 +1,18 @@
+   <dataset>  
+     <!--  <TableName column1Name="value1_ofRow1" column2Name="value2_ofRow1""/>  -->
+     <!--  <TableName column1Name="value1_ofRow2" column2Name="value2_ofRow2""/>  -->
+     <!-- <Table eventuellement sans pkColumn="..." if auto_increment /> -->
+    
+      <Adresse idAdr="1" codePostal="75000"  rue="007 rue elle" ville="Par ici" />
+      
+      <InfosAuth idAuth="1" password="mypwd" />
+      
+      <Client numClient="1" nom="Defrance" prenom="didier" dateNaissance="1969-07-11" ref_adressePrincipale="1" ref_infosAuth="1" />
+      
+      <Compte numCpt="1" label="compte courant"  solde="1200.0" ref_proprietaire="1" />
+      <Compte numCpt="2" label="compte codevi"  solde="50.0" ref_proprietaire="1" />
+      <!--  <Compte  label="compte codevi"  solde="50.0" ref_proprietaire="1" /> -->
+      
+      <Operation numOp="1" dateOp="2010-12-24" label="achat xy" montant="-50"  ref_compte="1" />
+     
+   </dataset>  

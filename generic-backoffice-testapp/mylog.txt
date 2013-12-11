@@ -1,0 +1,580 @@
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.loader.Loader - result row: null, null, null, EntityKey[xxx.yyy.zzz.backoffice_test.entity._Compte#9]
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.engine.TwoPhaseLoad - resolving associations for [xxx.yyy.zzz.backoffice_test.entity._Compte#9]
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.engine.TwoPhaseLoad - done materializing entity [xxx.yyy.zzz.backoffice_test.entity._Compte#9]
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.loader.Loader - done entity load
+2013-12-11 10:57:04,980 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Initiating transaction commit
+2013-12-11 10:57:04,980 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Committing JPA transaction on EntityManager [org.hibernate.ejb.EntityManagerImpl@13835ba]
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.transaction.JDBCTransaction - commit
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.engine.Collections - Collection dereferenced: [xxx.yyy.zzz.backoffice_test.entity._Compte.operations#9]
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 1 removals to 1 collections
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.pretty.Printer - listing entities:
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.pretty.Printer - xxx.yyy.zzz.backoffice_test.entity._Compte{solde=76.0, proprietaire=null, label=compte pel updated, operations=<uninitialized>, numCpt=9}
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2013-12-11 10:57:04,980 DEBUG main org.hibernate.SQL - delete from Compte where numCpt=?
+2013-12-11 10:57:04,981 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
+2013-12-11 10:57:04,981 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2013-12-11 10:57:04,983 DEBUG main org.hibernate.transaction.JDBCTransaction - re-enabling autocommit
+2013-12-11 10:57:04,984 DEBUG main org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+2013-12-11 10:57:04,984 DEBUG main org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+2013-12-11 10:57:04,984 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2013-12-11 10:57:04,984 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [org.hibernate.ejb.EntityManagerImpl@13835ba] after transaction
+2013-12-11 10:57:04,984 DEBUG main org.springframework.orm.jpa.EntityManagerFactoryUtils - Closing JPA EntityManager
+2013-12-11 10:57:04,984 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jamonGenericProfilerAspectBean'
+2013-12-11 10:57:04,984 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'txManager'
+2013-12-11 10:57:04,984 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Creating new transaction with name [org.mycontrib.generic.persistence.spring.GenericDaoJpaSpring.getEntityById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly; ''
+2013-12-11 10:57:04,984 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 13867558249
+2013-12-11 10:57:04,984 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Opened new EntityManager [org.hibernate.ejb.EntityManagerImpl@18414c5] for JPA transaction
+2013-12-11 10:57:04,984 DEBUG main org.hibernate.transaction.JDBCTransaction - begin
+2013-12-11 10:57:04,984 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2013-12-11 10:57:04,984 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:jamon:mysql://localhost/minibank_db?jamonrealdriver=com.mysql.jdbc.Driver]
+2013-12-11 10:57:04,987 DEBUG main org.hibernate.transaction.JDBCTransaction - current autocommit status: true
+2013-12-11 10:57:04,987 DEBUG main org.hibernate.transaction.JDBCTransaction - disabling autocommit
+2013-12-11 10:57:04,987 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Not exposing JPA transaction [org.hibernate.ejb.EntityManagerImpl@18414c5] as JDBC transaction because JpaDialect [org.springframework.orm.jpa.DefaultJpaDialect@1447ac7] does not support JDBC Connection retrieval
+2013-12-11 10:57:04,987 DEBUG main org.hibernate.loader.Loader - loading entity: [xxx.yyy.zzz.backoffice_test.entity._Compte#9]
+2013-12-11 10:57:04,987 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2013-12-11 10:57:04,987 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt3_3_, compte0_.label as label3_3_, compte0_.ref_proprietaire as ref4_3_3_, compte0_.solde as solde3_3_, client1_.numClient as numClient0_0_, client1_.ref_adressePrincipale as ref5_0_0_, client1_.dateNaissance as dateNais2_0_0_, client1_.ref_infosAuth as ref6_0_0_, client1_.nom as nom0_0_, client1_.prenom as prenom0_0_, adresse2_.idAdr as idAdr1_1_, adresse2_.codePostal as codePostal1_1_, adresse2_.rue as rue1_1_, adresse2_.ville as ville1_1_, infosauth3_.idAuth as idAuth2_2_, infosauth3_.password as password2_2_ from Compte compte0_ left outer join Client client1_ on compte0_.ref_proprietaire=client1_.numClient left outer join Adresse adresse2_ on client1_.ref_adressePrincipale=adresse2_.idAdr left outer join InfosAuth infosauth3_ on client1_.ref_infosAuth=infosauth3_.idAuth where compte0_.numCpt=?
+2013-12-11 10:57:04,988 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+2013-12-11 10:57:04,988 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+2013-12-11 10:57:04,988 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2013-12-11 10:57:04,988 DEBUG main org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+2013-12-11 10:57:04,988 DEBUG main org.hibernate.loader.Loader - done entity load
+2013-12-11 10:57:04,988 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Initiating transaction commit
+2013-12-11 10:57:04,988 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Committing JPA transaction on EntityManager [org.hibernate.ejb.EntityManagerImpl@18414c5]
+2013-12-11 10:57:04,988 DEBUG main org.hibernate.transaction.JDBCTransaction - commit
+2013-12-11 10:57:04,988 DEBUG main org.hibernate.transaction.JDBCTransaction - re-enabling autocommit
+2013-12-11 10:57:04,988 DEBUG main org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+2013-12-11 10:57:04,988 DEBUG main org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+2013-12-11 10:57:04,988 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2013-12-11 10:57:04,988 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [org.hibernate.ejb.EntityManagerImpl@18414c5] after transaction
+2013-12-11 10:57:04,988 DEBUG main org.springframework.orm.jpa.EntityManagerFactoryUtils - Closing JPA EntityManager
+2013-12-11 10:57:04,988 INFO main org.mycontrib.generic.test.GenericDaoTest - 	 entite bien supprimee
+2013-12-11 10:57:04,995 INFO main org.mycontrib.generic.test.GenericDaoTest - ****** end of CRUD test avec plusieurs petites transactions *****
+
+2013-12-11 10:57:04,996 DEBUG main org.springframework.test.context.support.DirtiesContextTestExecutionListener - After test method: context [[TestContext@4b0431 testClass = TestDaoCompteWithGenericAndDbUnit, locations = array<String>['classpath:/serviceSpringConf.xml', 'classpath:/dataSourceForTestSpringConf.xml'], testInstance = xxx.yyy.zzz.backoffice_test.test.TestDaoCompteWithGenericAndDbUnit@1e92d1b, testMethod = testGenericDao_CRUD@GenericDaoTest, testException = [null]]], class dirties context [false], class mode [null], method dirties context [false].
+2013-12-11 10:57:04,997 DEBUG main org.springframework.test.context.support.DirtiesContextTestExecutionListener - After test class: context [[TestContext@4b0431 testClass = TestDaoCompteWithGenericAndDbUnit, locations = array<String>['classpath:/serviceSpringConf.xml', 'classpath:/dataSourceForTestSpringConf.xml'], testInstance = [null], testMethod = [null], testException = [null]]], dirtiesContext [false].
+2013-12-11 10:57:05,000 DEBUG main org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte].
+2013-12-11 10:57:05,000 INFO main org.springframework.test.context.TestContextManager - @TestExecutionListeners is not present for class [class xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte]: using defaults.
+2013-12-11 10:57:05,000 DEBUG main org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte]
+2013-12-11 10:57:05,000 DEBUG main org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte]
+2013-12-11 10:57:05,000 DEBUG main org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte]
+2013-12-11 10:57:05,000 DEBUG main org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte]
+2013-12-11 10:57:05,002 DEBUG main org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte]
+2013-12-11 10:57:05,002 DEBUG main org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte]
+2013-12-11 10:57:05,003 DEBUG main org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[TestContext@f063ae testClass = TestServiceGestionCompte, locations = array<String>['classpath:/serviceSpringConf.xml', 'classpath:/dataSourceForTestSpringConf.xml'], testInstance = xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte@204d9b, testMethod = [null], testException = [null]]].
+2013-12-11 10:57:05,005 DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Found injected element on class [xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte]: AutowiredFieldElement for private xxx.yyy.zzz.backoffice_test.service.GestionComptes xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte.serviceGC
+2013-12-11 10:57:05,005 DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte': AutowiredFieldElement for private xxx.yyy.zzz.backoffice_test.service.GestionComptes xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte.serviceGC
+2013-12-11 10:57:05,005 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'gestionComptesImpl'
+2013-12-11 10:57:05,005 DEBUG main org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor - Autowiring by type from bean name 'xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte' to bean named 'gestionComptesImpl'
+2013-12-11 10:57:05,005 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2013-12-11 10:57:05,005 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2013-12-11 10:57:05,005 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-12-11 10:57:05,005 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#0'
+2013-12-11 10:57:05,005 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.aop.aspectj.AspectJPointcutAdvisor#1'
+2013-12-11 10:57:05,005 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'org.springframework.transaction.config.internalTransactionAdvisor'
+2013-12-11 10:57:05,006 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'txManager'
+2013-12-11 10:57:05,006 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Creating new transaction with name [xxx.yyy.zzz.backoffice_test.service.GestionComptesImpl.rechercherCompteParNumero]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+2013-12-11 10:57:05,006 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 13867558250
+2013-12-11 10:57:05,006 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Opened new EntityManager [org.hibernate.ejb.EntityManagerImpl@1b4b780] for JPA transaction
+2013-12-11 10:57:05,006 DEBUG main org.hibernate.transaction.JDBCTransaction - begin
+2013-12-11 10:57:05,006 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2013-12-11 10:57:05,006 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:jamon:mysql://localhost/minibank_db?jamonrealdriver=com.mysql.jdbc.Driver]
+2013-12-11 10:57:05,009 DEBUG main org.hibernate.transaction.JDBCTransaction - current autocommit status: true
+2013-12-11 10:57:05,009 DEBUG main org.hibernate.transaction.JDBCTransaction - disabling autocommit
+2013-12-11 10:57:05,009 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Not exposing JPA transaction [org.hibernate.ejb.EntityManagerImpl@1b4b780] as JDBC transaction because JpaDialect [org.springframework.orm.jpa.DefaultJpaDialect@1447ac7] does not support JDBC Connection retrieval
+2013-12-11 10:57:05,009 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jamonGenericProfilerAspectBean'
+2013-12-11 10:57:05,009 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'txManager'
+2013-12-11 10:57:05,009 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [org.hibernate.ejb.EntityManagerImpl@1b4b780] for JPA transaction
+2013-12-11 10:57:05,009 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Participating in existing transaction
+2013-12-11 10:57:05,009 DEBUG main org.hibernate.loader.Loader - loading entity: [xxx.yyy.zzz.backoffice_test.entity._Compte#1]
+2013-12-11 10:57:05,009 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2013-12-11 10:57:05,009 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt3_3_, compte0_.label as label3_3_, compte0_.ref_proprietaire as ref4_3_3_, compte0_.solde as solde3_3_, client1_.numClient as numClient0_0_, client1_.ref_adressePrincipale as ref5_0_0_, client1_.dateNaissance as dateNais2_0_0_, client1_.ref_infosAuth as ref6_0_0_, client1_.nom as nom0_0_, client1_.prenom as prenom0_0_, adresse2_.idAdr as idAdr1_1_, adresse2_.codePostal as codePostal1_1_, adresse2_.rue as rue1_1_, adresse2_.ville as ville1_1_, infosauth3_.idAuth as idAuth2_2_, infosauth3_.password as password2_2_ from Compte compte0_ left outer join Client client1_ on compte0_.ref_proprietaire=client1_.numClient left outer join Adresse adresse2_ on client1_.ref_adressePrincipale=adresse2_.idAdr left outer join InfosAuth infosauth3_ on client1_.ref_infosAuth=infosauth3_.idAuth where compte0_.numCpt=?
+2013-12-11 10:57:05,010 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+2013-12-11 10:57:05,010 DEBUG main org.hibernate.loader.Loader - result row: EntityKey[xxx.yyy.zzz.backoffice_test.entity._Client#1], EntityKey[xxx.yyy.zzz.backoffice_test.entity._Adresse#1], EntityKey[xxx.yyy.zzz.backoffice_test.entity._InfosAuth#1], EntityKey[xxx.yyy.zzz.backoffice_test.entity._Compte#1]
+2013-12-11 10:57:05,010 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+2013-12-11 10:57:05,010 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2013-12-11 10:57:05,010 DEBUG main org.hibernate.engine.TwoPhaseLoad - resolving associations for [xxx.yyy.zzz.backoffice_test.entity._Client#1]
+2013-12-11 10:57:05,010 DEBUG main org.hibernate.engine.TwoPhaseLoad - done materializing entity [xxx.yyy.zzz.backoffice_test.entity._Client#1]
+2013-12-11 10:57:05,011 DEBUG main org.hibernate.engine.TwoPhaseLoad - resolving associations for [xxx.yyy.zzz.backoffice_test.entity._Adresse#1]
+2013-12-11 10:57:05,011 DEBUG main org.hibernate.engine.TwoPhaseLoad - done materializing entity [xxx.yyy.zzz.backoffice_test.entity._Adresse#1]
+2013-12-11 10:57:05,011 DEBUG main org.hibernate.engine.TwoPhaseLoad - resolving associations for [xxx.yyy.zzz.backoffice_test.entity._InfosAuth#1]
+2013-12-11 10:57:05,011 DEBUG main org.hibernate.engine.TwoPhaseLoad - done materializing entity [xxx.yyy.zzz.backoffice_test.entity._InfosAuth#1]
+2013-12-11 10:57:05,011 DEBUG main org.hibernate.engine.TwoPhaseLoad - resolving associations for [xxx.yyy.zzz.backoffice_test.entity._Compte#1]
+2013-12-11 10:57:05,011 DEBUG main org.hibernate.engine.TwoPhaseLoad - done materializing entity [xxx.yyy.zzz.backoffice_test.entity._Compte#1]
+2013-12-11 10:57:05,011 DEBUG main org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+2013-12-11 10:57:05,011 DEBUG main org.hibernate.loader.Loader - done entity load
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.BooleanConverter - Setting default value: false
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.BooleanConverter - Converting 'Boolean' value 'false' to type 'Boolean'
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.BooleanConverter -     No conversion required, value is already a Boolean
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.ByteConverter - Setting default value: 0
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.ByteConverter - Converting 'Integer' value '0' to type 'Byte'
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.ByteConverter -     Converted to Byte value '0'
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.CharacterConverter - Setting default value:  
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.CharacterConverter - Converting 'Character' value ' ' to type 'Character'
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.CharacterConverter -     No conversion required, value is already a Character
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.DoubleConverter - Setting default value: 0
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.DoubleConverter - Converting 'Integer' value '0' to type 'Double'
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.DoubleConverter -     Converted to Double value '0.0'
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.FloatConverter - Setting default value: 0
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.FloatConverter - Converting 'Integer' value '0' to type 'Float'
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.FloatConverter -     Converted to Float value '0.0'
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.IntegerConverter - Setting default value: 0
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.IntegerConverter - Converting 'Integer' value '0' to type 'Integer'
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.IntegerConverter -     No conversion required, value is already a Integer
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.LongConverter - Setting default value: 0
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.LongConverter - Converting 'Integer' value '0' to type 'Long'
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.LongConverter -     Converted to Long value '0'
+2013-12-11 10:57:05,101 DEBUG main org.apache.commons.beanutils.converters.ShortConverter - Setting default value: 0
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.ShortConverter - Converting 'Integer' value '0' to type 'Short'
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.ShortConverter -     Converted to Short value '0'
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.BigDecimalConverter - Setting default value: 0.0
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.BigDecimalConverter - Converting 'BigDecimal' value '0.0' to type 'BigDecimal'
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.BigDecimalConverter -     No conversion required, value is already a BigDecimal
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.BigIntegerConverter - Setting default value: 0
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.BigIntegerConverter - Converting 'BigInteger' value '0' to type 'BigInteger'
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.BigIntegerConverter -     No conversion required, value is already a BigInteger
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.BooleanConverter - Setting default value: false
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.BooleanConverter - Converting 'Boolean' value 'false' to type 'Boolean'
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.BooleanConverter -     No conversion required, value is already a Boolean
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.ByteConverter - Setting default value: 0
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.ByteConverter - Converting 'Integer' value '0' to type 'Byte'
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.ByteConverter -     Converted to Byte value '0'
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.CharacterConverter - Setting default value:  
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.CharacterConverter - Converting 'Character' value ' ' to type 'Character'
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.CharacterConverter -     No conversion required, value is already a Character
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.DoubleConverter - Setting default value: 0
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.DoubleConverter - Converting 'Integer' value '0' to type 'Double'
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.DoubleConverter -     Converted to Double value '0.0'
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.FloatConverter - Setting default value: 0
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.FloatConverter - Converting 'Integer' value '0' to type 'Float'
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.FloatConverter -     Converted to Float value '0.0'
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.IntegerConverter - Setting default value: 0
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.IntegerConverter - Converting 'Integer' value '0' to type 'Integer'
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.IntegerConverter -     No conversion required, value is already a Integer
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.LongConverter - Setting default value: 0
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.LongConverter - Converting 'Integer' value '0' to type 'Long'
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.LongConverter -     Converted to Long value '0'
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.ShortConverter - Setting default value: 0
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.ShortConverter - Converting 'Integer' value '0' to type 'Short'
+2013-12-11 10:57:05,102 DEBUG main org.apache.commons.beanutils.converters.ShortConverter -     Converted to Short value '0'
+2013-12-11 10:57:05,103 DEBUG main org.apache.commons.beanutils.converters.StringConverter - Setting default value: 
+2013-12-11 10:57:05,103 DEBUG main org.apache.commons.beanutils.converters.StringConverter - Converting 'String' value '' to type 'String'
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Z@16b1731
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'boolean[]' value '[Z@16b1731' to type 'boolean[]'
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a boolean[]
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [B@1bfcb1c
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'byte[]' value '[B@1bfcb1c' to type 'byte[]'
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a byte[]
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [C@afcc60
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'char[]' value '[C@afcc60' to type 'char[]'
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a char[]
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [D@192c77e
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'double[]' value '[D@192c77e' to type 'double[]'
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a double[]
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [F@1673891
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'float[]' value '[F@1673891' to type 'float[]'
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a float[]
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [I@1b2f8ef
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'int[]' value '[I@1b2f8ef' to type 'int[]'
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a int[]
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [J@f53cd0
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'long[]' value '[J@f53cd0' to type 'long[]'
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a long[]
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [S@6b9af4
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'short[]' value '[S@6b9af4' to type 'short[]'
+2013-12-11 10:57:05,107 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a short[]
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.math.BigDecimal;@8a0d7d
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'BigDecimal[]' value '[Ljava.math.BigDecimal;@8a0d7d' to type 'BigDecimal[]'
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a BigDecimal[]
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.math.BigInteger;@1b1241
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'BigInteger[]' value '[Ljava.math.BigInteger;@1b1241' to type 'BigInteger[]'
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a BigInteger[]
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.lang.Boolean;@1998b7d
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'Boolean[]' value '[Ljava.lang.Boolean;@1998b7d' to type 'Boolean[]'
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a Boolean[]
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.lang.Byte;@1e77ebd
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'Byte[]' value '[Ljava.lang.Byte;@1e77ebd' to type 'Byte[]'
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a Byte[]
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.lang.Character;@f0a55c
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'Character[]' value '[Ljava.lang.Character;@f0a55c' to type 'Character[]'
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a Character[]
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.lang.Double;@178eb9
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'Double[]' value '[Ljava.lang.Double;@178eb9' to type 'Double[]'
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a Double[]
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.lang.Float;@1612129
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'Float[]' value '[Ljava.lang.Float;@1612129' to type 'Float[]'
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a Float[]
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.lang.Integer;@eea69b
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'Integer[]' value '[Ljava.lang.Integer;@eea69b' to type 'Integer[]'
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a Integer[]
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.lang.Long;@1f1fb9c
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'Long[]' value '[Ljava.lang.Long;@1f1fb9c' to type 'Long[]'
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a Long[]
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.lang.Short;@425b08
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'Short[]' value '[Ljava.lang.Short;@425b08' to type 'Short[]'
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a Short[]
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.lang.String;@1dd3a26
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'String[]' value '[Ljava.lang.String;@1dd3a26' to type 'String[]'
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a String[]
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.lang.Class;@114af64
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'Class[]' value '[Ljava.lang.Class;@114af64' to type 'Class[]'
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a Class[]
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.util.Date;@1f22a25
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'Date[]' value '[Ljava.util.Date;@1f22a25' to type 'Date[]'
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a Date[]
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.util.Calendar;@98f56c
+2013-12-11 10:57:05,108 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'Calendar[]' value '[Ljava.util.Calendar;@98f56c' to type 'Calendar[]'
+2013-12-11 10:57:05,109 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a Calendar[]
+2013-12-11 10:57:05,109 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.io.File;@1be789c
+2013-12-11 10:57:05,109 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'java.io.File[]' value '[Ljava.io.File;@1be789c' to type 'java.io.File[]'
+2013-12-11 10:57:05,109 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a java.io.File[]
+2013-12-11 10:57:05,109 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.sql.Date;@108eeac
+2013-12-11 10:57:05,109 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'java.sql.Date[]' value '[Ljava.sql.Date;@108eeac' to type 'java.sql.Date[]'
+2013-12-11 10:57:05,109 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a java.sql.Date[]
+2013-12-11 10:57:05,109 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.sql.Time;@1dedd1e
+2013-12-11 10:57:05,109 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'java.sql.Time[]' value '[Ljava.sql.Time;@1dedd1e' to type 'java.sql.Time[]'
+2013-12-11 10:57:05,109 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a java.sql.Time[]
+2013-12-11 10:57:05,109 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.sql.Timestamp;@11b022
+2013-12-11 10:57:05,109 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'java.sql.Timestamp[]' value '[Ljava.sql.Timestamp;@11b022' to type 'java.sql.Timestamp[]'
+2013-12-11 10:57:05,109 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a java.sql.Timestamp[]
+2013-12-11 10:57:05,109 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Setting default value: [Ljava.net.URL;@15a2ae9
+2013-12-11 10:57:05,109 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter - Converting 'java.net.URL[]' value '[Ljava.net.URL;@15a2ae9' to type 'java.net.URL[]'
+2013-12-11 10:57:05,109 DEBUG main org.apache.commons.beanutils.converters.ArrayConverter -     No conversion required, value is already a java.net.URL[]
+2013-12-11 10:57:05,122 DEBUG main org.dozer.fieldmap.FieldMap - Getting ready to invoke write method on the destination object. Dest Obj: Compte, Dest value: compte courant
+2013-12-11 10:57:05,123 DEBUG main org.dozer.MappingProcessor - MAPPED: _Compte.label --> Compte.label    VALUES: compte courant --> compte courant    MAPID: 
+2013-12-11 10:57:05,123 DEBUG main org.apache.commons.beanutils.converters.LongConverter - Converting 'Long' value '1' to type 'Long'
+2013-12-11 10:57:05,123 DEBUG main org.apache.commons.beanutils.converters.LongConverter -     No conversion required, value is already a Long
+2013-12-11 10:57:05,123 DEBUG main org.dozer.fieldmap.FieldMap - Getting ready to invoke write method on the destination object. Dest Obj: Compte, Dest value: 1
+2013-12-11 10:57:05,123 DEBUG main org.dozer.MappingProcessor - MAPPED: _Compte.numCpt --> Compte.numCpt    VALUES: 1 --> 1    MAPID: 
+2013-12-11 10:57:05,123 DEBUG main org.apache.commons.beanutils.converters.DoubleConverter - Converting 'Double' value '1200.0' to type 'Double'
+2013-12-11 10:57:05,123 DEBUG main org.apache.commons.beanutils.converters.DoubleConverter -     No conversion required, value is already a Double
+2013-12-11 10:57:05,123 DEBUG main org.dozer.fieldmap.FieldMap - Getting ready to invoke write method on the destination object. Dest Obj: Compte, Dest value: 1200.0
+2013-12-11 10:57:05,123 DEBUG main org.dozer.MappingProcessor - MAPPED: _Compte.solde --> Compte.solde    VALUES: 1200.0 --> 1200.0    MAPID: 
+2013-12-11 10:57:05,123 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Initiating transaction commit
+2013-12-11 10:57:05,123 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Committing JPA transaction on EntityManager [org.hibernate.ejb.EntityManagerImpl@1b4b780]
+2013-12-11 10:57:05,123 DEBUG main org.hibernate.transaction.JDBCTransaction - commit
+2013-12-11 10:57:05,123 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2013-12-11 10:57:05,123 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2013-12-11 10:57:05,123 DEBUG main org.hibernate.engine.Collections - Collection found: [xxx.yyy.zzz.backoffice_test.entity._Compte.operations#1], was: [xxx.yyy.zzz.backoffice_test.entity._Compte.operations#1] (uninitialized)
+2013-12-11 10:57:05,123 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 4 objects
+2013-12-11 10:57:05,123 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+2013-12-11 10:57:05,123 DEBUG main org.hibernate.pretty.Printer - listing entities:
+2013-12-11 10:57:05,123 DEBUG main org.hibernate.pretty.Printer - xxx.yyy.zzz.backoffice_test.entity._Compte{solde=1200.0, proprietaire=xxx.yyy.zzz.backoffice_test.entity._Client#1, label=compte courant, operations=<uninitialized>, numCpt=1}
+2013-12-11 10:57:05,123 DEBUG main org.hibernate.pretty.Printer - xxx.yyy.zzz.backoffice_test.entity._InfosAuth{idAuth=1, password=mypwd}
+2013-12-11 10:57:05,123 DEBUG main org.hibernate.pretty.Printer - xxx.yyy.zzz.backoffice_test.entity._Client{prenom=didier, dateNaissance=1969-07-11 00:00:00, infosAuth=xxx.yyy.zzz.backoffice_test.entity._InfosAuth#1, numClient=1, adressePrincipale=xxx.yyy.zzz.backoffice_test.entity._Adresse#1, nom=Defrance}
+2013-12-11 10:57:05,123 DEBUG main org.hibernate.pretty.Printer - xxx.yyy.zzz.backoffice_test.entity._Adresse{rue=007 rue elle, codePostal=75000, ville=Par ici, idAdr=1}
+2013-12-11 10:57:05,124 DEBUG main org.hibernate.transaction.JDBCTransaction - re-enabling autocommit
+2013-12-11 10:57:05,124 DEBUG main org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+2013-12-11 10:57:05,124 DEBUG main org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+2013-12-11 10:57:05,124 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2013-12-11 10:57:05,124 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [org.hibernate.ejb.EntityManagerImpl@1b4b780] after transaction
+2013-12-11 10:57:05,124 DEBUG main org.springframework.orm.jpa.EntityManagerFactoryUtils - Closing JPA EntityManager
+2013-12-11 10:57:05,124 DEBUG main org.springframework.test.context.support.DirtiesContextTestExecutionListener - After test method: context [[TestContext@f063ae testClass = TestServiceGestionCompte, locations = array<String>['classpath:/serviceSpringConf.xml', 'classpath:/dataSourceForTestSpringConf.xml'], testInstance = xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte@204d9b, testMethod = testGetCompteByNum@TestServiceGestionCompte, testException = [null]]], class dirties context [false], class mode [null], method dirties context [false].
+2013-12-11 10:57:05,125 DEBUG main org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte]
+2013-12-11 10:57:05,125 DEBUG main org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte]
+2013-12-11 10:57:05,125 DEBUG main org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[TestContext@f063ae testClass = TestServiceGestionCompte, locations = array<String>['classpath:/serviceSpringConf.xml', 'classpath:/dataSourceForTestSpringConf.xml'], testInstance = xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte@8e53f2, testMethod = [null], testException = [null]]].
+2013-12-11 10:57:05,125 DEBUG main org.springframework.beans.factory.annotation.InjectionMetadata - Processing injected method of bean 'xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte': AutowiredFieldElement for private xxx.yyy.zzz.backoffice_test.service.GestionComptes xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte.serviceGC
+2013-12-11 10:57:05,125 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'gestionComptesImpl'
+2013-12-11 10:57:05,125 DEBUG main org.springframework.transaction.annotation.AnnotationTransactionAttributeSource - Adding transactional method 'creerNouveauCompte' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+2013-12-11 10:57:05,125 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'txManager'
+2013-12-11 10:57:05,125 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Creating new transaction with name [xxx.yyy.zzz.backoffice_test.service.GestionComptesImpl.creerNouveauCompte]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+2013-12-11 10:57:05,125 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 13867558251
+2013-12-11 10:57:05,125 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Opened new EntityManager [org.hibernate.ejb.EntityManagerImpl@1e7455d] for JPA transaction
+2013-12-11 10:57:05,125 DEBUG main org.hibernate.transaction.JDBCTransaction - begin
+2013-12-11 10:57:05,125 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2013-12-11 10:57:05,125 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:jamon:mysql://localhost/minibank_db?jamonrealdriver=com.mysql.jdbc.Driver]
+2013-12-11 10:57:05,131 DEBUG main org.hibernate.transaction.JDBCTransaction - current autocommit status: true
+2013-12-11 10:57:05,131 DEBUG main org.hibernate.transaction.JDBCTransaction - disabling autocommit
+2013-12-11 10:57:05,132 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Not exposing JPA transaction [org.hibernate.ejb.EntityManagerImpl@1e7455d] as JDBC transaction because JpaDialect [org.springframework.orm.jpa.DefaultJpaDialect@1447ac7] does not support JDBC Connection retrieval
+2013-12-11 10:57:05,132 DEBUG main org.dozer.fieldmap.FieldMap - Getting ready to invoke write method on the destination object. Dest Obj: _Compte, Dest value: nouveau compte xxx
+2013-12-11 10:57:05,132 DEBUG main org.dozer.MappingProcessor - MAPPED: Compte.label --> _Compte.label    VALUES: nouveau compte xxx --> nouveau compte xxx    MAPID: 
+2013-12-11 10:57:05,132 DEBUG main org.dozer.fieldmap.FieldMap - Getting ready to invoke write method on the destination object. Dest Obj: _Compte, Dest value: null
+2013-12-11 10:57:05,132 DEBUG main org.dozer.MappingProcessor - MAPPED: Compte.numCpt --> _Compte.numCpt    VALUES: NULL --> NULL    MAPID: 
+2013-12-11 10:57:05,132 DEBUG main org.apache.commons.beanutils.converters.DoubleConverter - Converting 'Double' value '100.0' to type 'Double'
+2013-12-11 10:57:05,132 DEBUG main org.apache.commons.beanutils.converters.DoubleConverter -     No conversion required, value is already a Double
+2013-12-11 10:57:05,132 DEBUG main org.dozer.fieldmap.FieldMap - Getting ready to invoke write method on the destination object. Dest Obj: _Compte, Dest value: 100.0
+2013-12-11 10:57:05,132 DEBUG main org.dozer.MappingProcessor - MAPPED: Compte.solde --> _Compte.solde    VALUES: 100.0 --> 100.0    MAPID: 
+2013-12-11 10:57:05,133 DEBUG main org.springframework.transaction.annotation.AnnotationTransactionAttributeSource - Adding transactional method 'persistIdNewEntity' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+2013-12-11 10:57:05,133 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jamonGenericProfilerAspectBean'
+2013-12-11 10:57:05,133 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'txManager'
+2013-12-11 10:57:05,133 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [org.hibernate.ejb.EntityManagerImpl@1e7455d] for JPA transaction
+2013-12-11 10:57:05,133 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Participating in existing transaction
+2013-12-11 10:57:05,133 DEBUG main org.hibernate.event.def.AbstractSaveEventListener - executing identity-insert immediately
+2013-12-11 10:57:05,133 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2013-12-11 10:57:05,133 DEBUG main org.hibernate.SQL - insert into Compte (label, ref_proprietaire, solde) values (?, ?, ?)
+2013-12-11 10:57:05,135 DEBUG main org.hibernate.id.IdentifierGeneratorHelper - Natively generated identity: 10
+2013-12-11 10:57:05,135 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2013-12-11 10:57:05,135 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Initiating transaction commit
+2013-12-11 10:57:05,135 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Committing JPA transaction on EntityManager [org.hibernate.ejb.EntityManagerImpl@1e7455d]
+2013-12-11 10:57:05,135 DEBUG main org.hibernate.transaction.JDBCTransaction - commit
+2013-12-11 10:57:05,135 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2013-12-11 10:57:05,135 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2013-12-11 10:57:05,136 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2013-12-11 10:57:05,136 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2013-12-11 10:57:05,136 DEBUG main org.hibernate.pretty.Printer - listing entities:
+2013-12-11 10:57:05,136 DEBUG main org.hibernate.pretty.Printer - xxx.yyy.zzz.backoffice_test.entity._Compte{solde=100.0, proprietaire=null, label=nouveau compte xxx, operations=null, numCpt=10}
+2013-12-11 10:57:05,167 DEBUG main org.hibernate.transaction.JDBCTransaction - re-enabling autocommit
+2013-12-11 10:57:05,168 DEBUG main org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+2013-12-11 10:57:05,168 DEBUG main org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+2013-12-11 10:57:05,168 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2013-12-11 10:57:05,168 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [org.hibernate.ejb.EntityManagerImpl@1e7455d] after transaction
+2013-12-11 10:57:05,168 DEBUG main org.springframework.orm.jpa.EntityManagerFactoryUtils - Closing JPA EntityManager
+2013-12-11 10:57:05,168 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'txManager'
+2013-12-11 10:57:05,168 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Creating new transaction with name [xxx.yyy.zzz.backoffice_test.service.GestionComptesImpl.rechercherCompteParNumero]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+2013-12-11 10:57:05,168 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 13867558251
+2013-12-11 10:57:05,168 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Opened new EntityManager [org.hibernate.ejb.EntityManagerImpl@e4d1b7] for JPA transaction
+2013-12-11 10:57:05,168 DEBUG main org.hibernate.transaction.JDBCTransaction - begin
+2013-12-11 10:57:05,168 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2013-12-11 10:57:05,168 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:jamon:mysql://localhost/minibank_db?jamonrealdriver=com.mysql.jdbc.Driver]
+2013-12-11 10:57:05,172 DEBUG main org.hibernate.transaction.JDBCTransaction - current autocommit status: true
+2013-12-11 10:57:05,172 DEBUG main org.hibernate.transaction.JDBCTransaction - disabling autocommit
+2013-12-11 10:57:05,172 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Not exposing JPA transaction [org.hibernate.ejb.EntityManagerImpl@e4d1b7] as JDBC transaction because JpaDialect [org.springframework.orm.jpa.DefaultJpaDialect@1447ac7] does not support JDBC Connection retrieval
+2013-12-11 10:57:05,172 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jamonGenericProfilerAspectBean'
+2013-12-11 10:57:05,172 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'txManager'
+2013-12-11 10:57:05,172 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [org.hibernate.ejb.EntityManagerImpl@e4d1b7] for JPA transaction
+2013-12-11 10:57:05,172 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Participating in existing transaction
+2013-12-11 10:57:05,172 DEBUG main org.hibernate.loader.Loader - loading entity: [xxx.yyy.zzz.backoffice_test.entity._Compte#10]
+2013-12-11 10:57:05,172 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2013-12-11 10:57:05,172 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt3_3_, compte0_.label as label3_3_, compte0_.ref_proprietaire as ref4_3_3_, compte0_.solde as solde3_3_, client1_.numClient as numClient0_0_, client1_.ref_adressePrincipale as ref5_0_0_, client1_.dateNaissance as dateNais2_0_0_, client1_.ref_infosAuth as ref6_0_0_, client1_.nom as nom0_0_, client1_.prenom as prenom0_0_, adresse2_.idAdr as idAdr1_1_, adresse2_.codePostal as codePostal1_1_, adresse2_.rue as rue1_1_, adresse2_.ville as ville1_1_, infosauth3_.idAuth as idAuth2_2_, infosauth3_.password as password2_2_ from Compte compte0_ left outer join Client client1_ on compte0_.ref_proprietaire=client1_.numClient left outer join Adresse adresse2_ on client1_.ref_adressePrincipale=adresse2_.idAdr left outer join InfosAuth infosauth3_ on client1_.ref_infosAuth=infosauth3_.idAuth where compte0_.numCpt=?
+2013-12-11 10:57:05,173 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+2013-12-11 10:57:05,173 DEBUG main org.hibernate.loader.Loader - result row: null, null, null, EntityKey[xxx.yyy.zzz.backoffice_test.entity._Compte#10]
+2013-12-11 10:57:05,174 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+2013-12-11 10:57:05,174 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2013-12-11 10:57:05,174 DEBUG main org.hibernate.engine.TwoPhaseLoad - resolving associations for [xxx.yyy.zzz.backoffice_test.entity._Compte#10]
+2013-12-11 10:57:05,174 DEBUG main org.hibernate.engine.TwoPhaseLoad - done materializing entity [xxx.yyy.zzz.backoffice_test.entity._Compte#10]
+2013-12-11 10:57:05,174 DEBUG main org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+2013-12-11 10:57:05,174 DEBUG main org.hibernate.loader.Loader - done entity load
+2013-12-11 10:57:05,174 DEBUG main org.dozer.fieldmap.FieldMap - Getting ready to invoke write method on the destination object. Dest Obj: Compte, Dest value: nouveau compte xxx
+2013-12-11 10:57:05,174 DEBUG main org.dozer.MappingProcessor - MAPPED: _Compte.label --> Compte.label    VALUES: nouveau compte xxx --> nouveau compte xxx    MAPID: 
+2013-12-11 10:57:05,175 DEBUG main org.apache.commons.beanutils.converters.LongConverter - Converting 'Long' value '10' to type 'Long'
+2013-12-11 10:57:05,175 DEBUG main org.apache.commons.beanutils.converters.LongConverter -     No conversion required, value is already a Long
+2013-12-11 10:57:05,175 DEBUG main org.dozer.fieldmap.FieldMap - Getting ready to invoke write method on the destination object. Dest Obj: Compte, Dest value: 10
+2013-12-11 10:57:05,175 DEBUG main org.dozer.MappingProcessor - MAPPED: _Compte.numCpt --> Compte.numCpt    VALUES: 10 --> 10    MAPID: 
+2013-12-11 10:57:05,175 DEBUG main org.apache.commons.beanutils.converters.DoubleConverter - Converting 'Double' value '100.0' to type 'Double'
+2013-12-11 10:57:05,175 DEBUG main org.apache.commons.beanutils.converters.DoubleConverter -     No conversion required, value is already a Double
+2013-12-11 10:57:05,175 DEBUG main org.dozer.fieldmap.FieldMap - Getting ready to invoke write method on the destination object. Dest Obj: Compte, Dest value: 100.0
+2013-12-11 10:57:05,175 DEBUG main org.dozer.MappingProcessor - MAPPED: _Compte.solde --> Compte.solde    VALUES: 100.0 --> 100.0    MAPID: 
+2013-12-11 10:57:05,175 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Initiating transaction commit
+2013-12-11 10:57:05,175 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Committing JPA transaction on EntityManager [org.hibernate.ejb.EntityManagerImpl@e4d1b7]
+2013-12-11 10:57:05,175 DEBUG main org.hibernate.transaction.JDBCTransaction - commit
+2013-12-11 10:57:05,175 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2013-12-11 10:57:05,175 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2013-12-11 10:57:05,175 DEBUG main org.hibernate.engine.Collections - Collection found: [xxx.yyy.zzz.backoffice_test.entity._Compte.operations#10], was: [xxx.yyy.zzz.backoffice_test.entity._Compte.operations#10] (uninitialized)
+2013-12-11 10:57:05,175 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2013-12-11 10:57:05,175 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+2013-12-11 10:57:05,175 DEBUG main org.hibernate.pretty.Printer - listing entities:
+2013-12-11 10:57:05,175 DEBUG main org.hibernate.pretty.Printer - xxx.yyy.zzz.backoffice_test.entity._Compte{solde=100.0, proprietaire=null, label=nouveau compte xxx, operations=<uninitialized>, numCpt=10}
+2013-12-11 10:57:05,175 DEBUG main org.hibernate.transaction.JDBCTransaction - re-enabling autocommit
+2013-12-11 10:57:05,175 DEBUG main org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+2013-12-11 10:57:05,175 DEBUG main org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+2013-12-11 10:57:05,175 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2013-12-11 10:57:05,175 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [org.hibernate.ejb.EntityManagerImpl@e4d1b7] after transaction
+2013-12-11 10:57:05,175 DEBUG main org.springframework.orm.jpa.EntityManagerFactoryUtils - Closing JPA EntityManager
+2013-12-11 10:57:05,176 DEBUG main org.springframework.transaction.annotation.AnnotationTransactionAttributeSource - Adding transactional method 'majCompte' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+2013-12-11 10:57:05,176 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'txManager'
+2013-12-11 10:57:05,176 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Creating new transaction with name [xxx.yyy.zzz.backoffice_test.service.GestionComptesImpl.majCompte]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+2013-12-11 10:57:05,176 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 13867558251
+2013-12-11 10:57:05,176 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Opened new EntityManager [org.hibernate.ejb.EntityManagerImpl@1493b67] for JPA transaction
+2013-12-11 10:57:05,176 DEBUG main org.hibernate.transaction.JDBCTransaction - begin
+2013-12-11 10:57:05,176 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2013-12-11 10:57:05,176 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:jamon:mysql://localhost/minibank_db?jamonrealdriver=com.mysql.jdbc.Driver]
+2013-12-11 10:57:05,182 DEBUG main org.hibernate.transaction.JDBCTransaction - current autocommit status: true
+2013-12-11 10:57:05,182 DEBUG main org.hibernate.transaction.JDBCTransaction - disabling autocommit
+2013-12-11 10:57:05,183 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Not exposing JPA transaction [org.hibernate.ejb.EntityManagerImpl@1493b67] as JDBC transaction because JpaDialect [org.springframework.orm.jpa.DefaultJpaDialect@1447ac7] does not support JDBC Connection retrieval
+2013-12-11 10:57:05,183 DEBUG main org.dozer.fieldmap.FieldMap - Getting ready to invoke write method on the destination object. Dest Obj: _Compte, Dest value: nouveau compte xxx yyy
+2013-12-11 10:57:05,183 DEBUG main org.dozer.MappingProcessor - MAPPED: Compte.label --> _Compte.label    VALUES: nouveau compte xxx yyy --> nouveau compte xxx yyy    MAPID: 
+2013-12-11 10:57:05,183 DEBUG main org.apache.commons.beanutils.converters.LongConverter - Converting 'Long' value '10' to type 'Long'
+2013-12-11 10:57:05,183 DEBUG main org.apache.commons.beanutils.converters.LongConverter -     No conversion required, value is already a Long
+2013-12-11 10:57:05,183 DEBUG main org.dozer.fieldmap.FieldMap - Getting ready to invoke write method on the destination object. Dest Obj: _Compte, Dest value: 10
+2013-12-11 10:57:05,183 DEBUG main org.dozer.MappingProcessor - MAPPED: Compte.numCpt --> _Compte.numCpt    VALUES: 10 --> 10    MAPID: 
+2013-12-11 10:57:05,183 DEBUG main org.apache.commons.beanutils.converters.DoubleConverter - Converting 'Double' value '200.0' to type 'Double'
+2013-12-11 10:57:05,183 DEBUG main org.apache.commons.beanutils.converters.DoubleConverter -     No conversion required, value is already a Double
+2013-12-11 10:57:05,183 DEBUG main org.dozer.fieldmap.FieldMap - Getting ready to invoke write method on the destination object. Dest Obj: _Compte, Dest value: 200.0
+2013-12-11 10:57:05,184 DEBUG main org.dozer.MappingProcessor - MAPPED: Compte.solde --> _Compte.solde    VALUES: 200.0 --> 200.0    MAPID: 
+2013-12-11 10:57:05,184 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jamonGenericProfilerAspectBean'
+2013-12-11 10:57:05,184 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'txManager'
+2013-12-11 10:57:05,184 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [org.hibernate.ejb.EntityManagerImpl@1493b67] for JPA transaction
+2013-12-11 10:57:05,184 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Participating in existing transaction
+2013-12-11 10:57:05,184 DEBUG main org.hibernate.loader.Loader - loading entity: [xxx.yyy.zzz.backoffice_test.entity._Compte#10]
+2013-12-11 10:57:05,184 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2013-12-11 10:57:05,184 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt3_0_, compte0_.label as label3_0_, compte0_.ref_proprietaire as ref4_3_0_, compte0_.solde as solde3_0_ from Compte compte0_ where compte0_.numCpt=?
+2013-12-11 10:57:05,186 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+2013-12-11 10:57:05,186 DEBUG main org.hibernate.loader.Loader - result row: EntityKey[xxx.yyy.zzz.backoffice_test.entity._Compte#10]
+2013-12-11 10:57:05,186 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+2013-12-11 10:57:05,186 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2013-12-11 10:57:05,186 DEBUG main org.hibernate.engine.TwoPhaseLoad - resolving associations for [xxx.yyy.zzz.backoffice_test.entity._Compte#10]
+2013-12-11 10:57:05,186 DEBUG main org.hibernate.engine.TwoPhaseLoad - done materializing entity [xxx.yyy.zzz.backoffice_test.entity._Compte#10]
+2013-12-11 10:57:05,186 DEBUG main org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+2013-12-11 10:57:05,186 DEBUG main org.hibernate.loader.Loader - done entity load
+2013-12-11 10:57:05,187 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Initiating transaction commit
+2013-12-11 10:57:05,187 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Committing JPA transaction on EntityManager [org.hibernate.ejb.EntityManagerImpl@1493b67]
+2013-12-11 10:57:05,187 DEBUG main org.hibernate.transaction.JDBCTransaction - commit
+2013-12-11 10:57:05,187 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2013-12-11 10:57:05,187 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2013-12-11 10:57:05,187 DEBUG main org.hibernate.engine.Collections - Collection dereferenced: [xxx.yyy.zzz.backoffice_test.entity._Compte.operations#10]
+2013-12-11 10:57:05,187 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 insertions, 1 updates, 0 deletions to 1 objects
+2013-12-11 10:57:05,187 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 1 removals to 1 collections
+2013-12-11 10:57:05,187 DEBUG main org.hibernate.pretty.Printer - listing entities:
+2013-12-11 10:57:05,187 DEBUG main org.hibernate.pretty.Printer - xxx.yyy.zzz.backoffice_test.entity._Compte{solde=200.0, proprietaire=null, label=nouveau compte xxx yyy, operations=null, numCpt=10}
+2013-12-11 10:57:05,187 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2013-12-11 10:57:05,187 DEBUG main org.hibernate.SQL - update Compte set label=?, ref_proprietaire=?, solde=? where numCpt=?
+2013-12-11 10:57:05,188 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
+2013-12-11 10:57:05,188 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2013-12-11 10:57:05,192 DEBUG main org.hibernate.transaction.JDBCTransaction - re-enabling autocommit
+2013-12-11 10:57:05,192 DEBUG main org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+2013-12-11 10:57:05,192 DEBUG main org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+2013-12-11 10:57:05,192 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2013-12-11 10:57:05,193 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [org.hibernate.ejb.EntityManagerImpl@1493b67] after transaction
+2013-12-11 10:57:05,193 DEBUG main org.springframework.orm.jpa.EntityManagerFactoryUtils - Closing JPA EntityManager
+2013-12-11 10:57:05,193 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'txManager'
+2013-12-11 10:57:05,193 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Creating new transaction with name [xxx.yyy.zzz.backoffice_test.service.GestionComptesImpl.rechercherCompteParNumero]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+2013-12-11 10:57:05,193 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 13867558251
+2013-12-11 10:57:05,193 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Opened new EntityManager [org.hibernate.ejb.EntityManagerImpl@1baa4a] for JPA transaction
+2013-12-11 10:57:05,193 DEBUG main org.hibernate.transaction.JDBCTransaction - begin
+2013-12-11 10:57:05,193 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2013-12-11 10:57:05,193 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:jamon:mysql://localhost/minibank_db?jamonrealdriver=com.mysql.jdbc.Driver]
+2013-12-11 10:57:05,201 DEBUG main org.hibernate.transaction.JDBCTransaction - current autocommit status: true
+2013-12-11 10:57:05,201 DEBUG main org.hibernate.transaction.JDBCTransaction - disabling autocommit
+2013-12-11 10:57:05,201 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Not exposing JPA transaction [org.hibernate.ejb.EntityManagerImpl@1baa4a] as JDBC transaction because JpaDialect [org.springframework.orm.jpa.DefaultJpaDialect@1447ac7] does not support JDBC Connection retrieval
+2013-12-11 10:57:05,201 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jamonGenericProfilerAspectBean'
+2013-12-11 10:57:05,201 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'txManager'
+2013-12-11 10:57:05,201 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [org.hibernate.ejb.EntityManagerImpl@1baa4a] for JPA transaction
+2013-12-11 10:57:05,201 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Participating in existing transaction
+2013-12-11 10:57:05,201 DEBUG main org.hibernate.loader.Loader - loading entity: [xxx.yyy.zzz.backoffice_test.entity._Compte#10]
+2013-12-11 10:57:05,202 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2013-12-11 10:57:05,202 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt3_3_, compte0_.label as label3_3_, compte0_.ref_proprietaire as ref4_3_3_, compte0_.solde as solde3_3_, client1_.numClient as numClient0_0_, client1_.ref_adressePrincipale as ref5_0_0_, client1_.dateNaissance as dateNais2_0_0_, client1_.ref_infosAuth as ref6_0_0_, client1_.nom as nom0_0_, client1_.prenom as prenom0_0_, adresse2_.idAdr as idAdr1_1_, adresse2_.codePostal as codePostal1_1_, adresse2_.rue as rue1_1_, adresse2_.ville as ville1_1_, infosauth3_.idAuth as idAuth2_2_, infosauth3_.password as password2_2_ from Compte compte0_ left outer join Client client1_ on compte0_.ref_proprietaire=client1_.numClient left outer join Adresse adresse2_ on client1_.ref_adressePrincipale=adresse2_.idAdr left outer join InfosAuth infosauth3_ on client1_.ref_infosAuth=infosauth3_.idAuth where compte0_.numCpt=?
+2013-12-11 10:57:05,203 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+2013-12-11 10:57:05,203 DEBUG main org.hibernate.loader.Loader - result row: null, null, null, EntityKey[xxx.yyy.zzz.backoffice_test.entity._Compte#10]
+2013-12-11 10:57:05,203 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+2013-12-11 10:57:05,203 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2013-12-11 10:57:05,203 DEBUG main org.hibernate.engine.TwoPhaseLoad - resolving associations for [xxx.yyy.zzz.backoffice_test.entity._Compte#10]
+2013-12-11 10:57:05,204 DEBUG main org.hibernate.engine.TwoPhaseLoad - done materializing entity [xxx.yyy.zzz.backoffice_test.entity._Compte#10]
+2013-12-11 10:57:05,204 DEBUG main org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+2013-12-11 10:57:05,204 DEBUG main org.hibernate.loader.Loader - done entity load
+2013-12-11 10:57:05,204 DEBUG main org.dozer.fieldmap.FieldMap - Getting ready to invoke write method on the destination object. Dest Obj: Compte, Dest value: nouveau compte xxx yyy
+2013-12-11 10:57:05,204 DEBUG main org.dozer.MappingProcessor - MAPPED: _Compte.label --> Compte.label    VALUES: nouveau compte xxx yyy --> nouveau compte xxx yyy    MAPID: 
+2013-12-11 10:57:05,204 DEBUG main org.apache.commons.beanutils.converters.LongConverter - Converting 'Long' value '10' to type 'Long'
+2013-12-11 10:57:05,204 DEBUG main org.apache.commons.beanutils.converters.LongConverter -     No conversion required, value is already a Long
+2013-12-11 10:57:05,204 DEBUG main org.dozer.fieldmap.FieldMap - Getting ready to invoke write method on the destination object. Dest Obj: Compte, Dest value: 10
+2013-12-11 10:57:05,204 DEBUG main org.dozer.MappingProcessor - MAPPED: _Compte.numCpt --> Compte.numCpt    VALUES: 10 --> 10    MAPID: 
+2013-12-11 10:57:05,204 DEBUG main org.apache.commons.beanutils.converters.DoubleConverter - Converting 'Double' value '200.0' to type 'Double'
+2013-12-11 10:57:05,204 DEBUG main org.apache.commons.beanutils.converters.DoubleConverter -     No conversion required, value is already a Double
+2013-12-11 10:57:05,204 DEBUG main org.dozer.fieldmap.FieldMap - Getting ready to invoke write method on the destination object. Dest Obj: Compte, Dest value: 200.0
+2013-12-11 10:57:05,204 DEBUG main org.dozer.MappingProcessor - MAPPED: _Compte.solde --> Compte.solde    VALUES: 200.0 --> 200.0    MAPID: 
+2013-12-11 10:57:05,204 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Initiating transaction commit
+2013-12-11 10:57:05,205 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Committing JPA transaction on EntityManager [org.hibernate.ejb.EntityManagerImpl@1baa4a]
+2013-12-11 10:57:05,205 DEBUG main org.hibernate.transaction.JDBCTransaction - commit
+2013-12-11 10:57:05,205 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2013-12-11 10:57:05,205 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2013-12-11 10:57:05,205 DEBUG main org.hibernate.engine.Collections - Collection found: [xxx.yyy.zzz.backoffice_test.entity._Compte.operations#10], was: [xxx.yyy.zzz.backoffice_test.entity._Compte.operations#10] (uninitialized)
+2013-12-11 10:57:05,205 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2013-12-11 10:57:05,205 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+2013-12-11 10:57:05,205 DEBUG main org.hibernate.pretty.Printer - listing entities:
+2013-12-11 10:57:05,205 DEBUG main org.hibernate.pretty.Printer - xxx.yyy.zzz.backoffice_test.entity._Compte{solde=200.0, proprietaire=null, label=nouveau compte xxx yyy, operations=<uninitialized>, numCpt=10}
+2013-12-11 10:57:05,205 DEBUG main org.hibernate.transaction.JDBCTransaction - re-enabling autocommit
+2013-12-11 10:57:05,205 DEBUG main org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+2013-12-11 10:57:05,206 DEBUG main org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+2013-12-11 10:57:05,206 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2013-12-11 10:57:05,206 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [org.hibernate.ejb.EntityManagerImpl@1baa4a] after transaction
+2013-12-11 10:57:05,206 DEBUG main org.springframework.orm.jpa.EntityManagerFactoryUtils - Closing JPA EntityManager
+2013-12-11 10:57:05,207 DEBUG main org.springframework.transaction.annotation.AnnotationTransactionAttributeSource - Adding transactional method 'supprimerCompte' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+2013-12-11 10:57:05,207 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'txManager'
+2013-12-11 10:57:05,207 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Creating new transaction with name [xxx.yyy.zzz.backoffice_test.service.GestionComptesImpl.supprimerCompte]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+2013-12-11 10:57:05,207 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 13867558252
+2013-12-11 10:57:05,207 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Opened new EntityManager [org.hibernate.ejb.EntityManagerImpl@f7c8cb] for JPA transaction
+2013-12-11 10:57:05,208 DEBUG main org.hibernate.transaction.JDBCTransaction - begin
+2013-12-11 10:57:05,208 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2013-12-11 10:57:05,208 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:jamon:mysql://localhost/minibank_db?jamonrealdriver=com.mysql.jdbc.Driver]
+2013-12-11 10:57:05,217 DEBUG main org.hibernate.transaction.JDBCTransaction - current autocommit status: true
+2013-12-11 10:57:05,217 DEBUG main org.hibernate.transaction.JDBCTransaction - disabling autocommit
+2013-12-11 10:57:05,217 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Not exposing JPA transaction [org.hibernate.ejb.EntityManagerImpl@f7c8cb] as JDBC transaction because JpaDialect [org.springframework.orm.jpa.DefaultJpaDialect@1447ac7] does not support JDBC Connection retrieval
+2013-12-11 10:57:05,217 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jamonGenericProfilerAspectBean'
+2013-12-11 10:57:05,217 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'txManager'
+2013-12-11 10:57:05,217 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [org.hibernate.ejb.EntityManagerImpl@f7c8cb] for JPA transaction
+2013-12-11 10:57:05,217 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Participating in existing transaction
+2013-12-11 10:57:05,217 DEBUG main org.hibernate.loader.Loader - loading entity: [xxx.yyy.zzz.backoffice_test.entity._Compte#10]
+2013-12-11 10:57:05,217 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2013-12-11 10:57:05,217 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt3_3_, compte0_.label as label3_3_, compte0_.ref_proprietaire as ref4_3_3_, compte0_.solde as solde3_3_, client1_.numClient as numClient0_0_, client1_.ref_adressePrincipale as ref5_0_0_, client1_.dateNaissance as dateNais2_0_0_, client1_.ref_infosAuth as ref6_0_0_, client1_.nom as nom0_0_, client1_.prenom as prenom0_0_, adresse2_.idAdr as idAdr1_1_, adresse2_.codePostal as codePostal1_1_, adresse2_.rue as rue1_1_, adresse2_.ville as ville1_1_, infosauth3_.idAuth as idAuth2_2_, infosauth3_.password as password2_2_ from Compte compte0_ left outer join Client client1_ on compte0_.ref_proprietaire=client1_.numClient left outer join Adresse adresse2_ on client1_.ref_adressePrincipale=adresse2_.idAdr left outer join InfosAuth infosauth3_ on client1_.ref_infosAuth=infosauth3_.idAuth where compte0_.numCpt=?
+2013-12-11 10:57:05,217 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.loader.Loader - result row: null, null, null, EntityKey[xxx.yyy.zzz.backoffice_test.entity._Compte#10]
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.engine.TwoPhaseLoad - resolving associations for [xxx.yyy.zzz.backoffice_test.entity._Compte#10]
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.engine.TwoPhaseLoad - done materializing entity [xxx.yyy.zzz.backoffice_test.entity._Compte#10]
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.loader.Loader - done entity load
+2013-12-11 10:57:05,218 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Initiating transaction commit
+2013-12-11 10:57:05,218 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Committing JPA transaction on EntityManager [org.hibernate.ejb.EntityManagerImpl@f7c8cb]
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.transaction.JDBCTransaction - commit
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.engine.Collections - Collection dereferenced: [xxx.yyy.zzz.backoffice_test.entity._Compte.operations#10]
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 1 removals to 1 collections
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.pretty.Printer - listing entities:
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.pretty.Printer - xxx.yyy.zzz.backoffice_test.entity._Compte{solde=200.0, proprietaire=null, label=nouveau compte xxx yyy, operations=<uninitialized>, numCpt=10}
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.SQL - delete from Compte where numCpt=?
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
+2013-12-11 10:57:05,218 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2013-12-11 10:57:05,220 DEBUG main org.hibernate.transaction.JDBCTransaction - re-enabling autocommit
+2013-12-11 10:57:05,220 DEBUG main org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+2013-12-11 10:57:05,220 DEBUG main org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+2013-12-11 10:57:05,220 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2013-12-11 10:57:05,221 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [org.hibernate.ejb.EntityManagerImpl@f7c8cb] after transaction
+2013-12-11 10:57:05,221 DEBUG main org.springframework.orm.jpa.EntityManagerFactoryUtils - Closing JPA EntityManager
+2013-12-11 10:57:05,221 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'txManager'
+2013-12-11 10:57:05,221 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Creating new transaction with name [xxx.yyy.zzz.backoffice_test.service.GestionComptesImpl.rechercherCompteParNumero]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT; ''
+2013-12-11 10:57:05,221 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 13867558252
+2013-12-11 10:57:05,221 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Opened new EntityManager [org.hibernate.ejb.EntityManagerImpl@c57cf9] for JPA transaction
+2013-12-11 10:57:05,221 DEBUG main org.hibernate.transaction.JDBCTransaction - begin
+2013-12-11 10:57:05,221 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2013-12-11 10:57:05,221 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:jamon:mysql://localhost/minibank_db?jamonrealdriver=com.mysql.jdbc.Driver]
+2013-12-11 10:57:05,225 DEBUG main org.hibernate.transaction.JDBCTransaction - current autocommit status: true
+2013-12-11 10:57:05,225 DEBUG main org.hibernate.transaction.JDBCTransaction - disabling autocommit
+2013-12-11 10:57:05,229 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Not exposing JPA transaction [org.hibernate.ejb.EntityManagerImpl@c57cf9] as JDBC transaction because JpaDialect [org.springframework.orm.jpa.DefaultJpaDialect@1447ac7] does not support JDBC Connection retrieval
+2013-12-11 10:57:05,229 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'jamonGenericProfilerAspectBean'
+2013-12-11 10:57:05,229 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'txManager'
+2013-12-11 10:57:05,229 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Found thread-bound EntityManager [org.hibernate.ejb.EntityManagerImpl@c57cf9] for JPA transaction
+2013-12-11 10:57:05,229 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Participating in existing transaction
+2013-12-11 10:57:05,229 DEBUG main org.hibernate.loader.Loader - loading entity: [xxx.yyy.zzz.backoffice_test.entity._Compte#10]
+2013-12-11 10:57:05,229 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2013-12-11 10:57:05,229 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt3_3_, compte0_.label as label3_3_, compte0_.ref_proprietaire as ref4_3_3_, compte0_.solde as solde3_3_, client1_.numClient as numClient0_0_, client1_.ref_adressePrincipale as ref5_0_0_, client1_.dateNaissance as dateNais2_0_0_, client1_.ref_infosAuth as ref6_0_0_, client1_.nom as nom0_0_, client1_.prenom as prenom0_0_, adresse2_.idAdr as idAdr1_1_, adresse2_.codePostal as codePostal1_1_, adresse2_.rue as rue1_1_, adresse2_.ville as ville1_1_, infosauth3_.idAuth as idAuth2_2_, infosauth3_.password as password2_2_ from Compte compte0_ left outer join Client client1_ on compte0_.ref_proprietaire=client1_.numClient left outer join Adresse adresse2_ on client1_.ref_adressePrincipale=adresse2_.idAdr left outer join InfosAuth infosauth3_ on client1_.ref_infosAuth=infosauth3_.idAuth where compte0_.numCpt=?
+2013-12-11 10:57:05,230 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+2013-12-11 10:57:05,230 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+2013-12-11 10:57:05,230 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2013-12-11 10:57:05,230 DEBUG main org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+2013-12-11 10:57:05,230 DEBUG main org.hibernate.loader.Loader - done entity load
+2013-12-11 10:57:05,230 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Initiating transaction commit
+2013-12-11 10:57:05,230 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Committing JPA transaction on EntityManager [org.hibernate.ejb.EntityManagerImpl@c57cf9]
+2013-12-11 10:57:05,230 DEBUG main org.hibernate.transaction.JDBCTransaction - commit
+2013-12-11 10:57:05,230 DEBUG main org.hibernate.transaction.JDBCTransaction - re-enabling autocommit
+2013-12-11 10:57:05,230 DEBUG main org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+2013-12-11 10:57:05,230 DEBUG main org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+2013-12-11 10:57:05,230 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2013-12-11 10:57:05,230 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [org.hibernate.ejb.EntityManagerImpl@c57cf9] after transaction
+2013-12-11 10:57:05,230 DEBUG main org.springframework.orm.jpa.EntityManagerFactoryUtils - Closing JPA EntityManager
+2013-12-11 10:57:05,230 DEBUG main org.springframework.test.context.support.DirtiesContextTestExecutionListener - After test method: context [[TestContext@f063ae testClass = TestServiceGestionCompte, locations = array<String>['classpath:/serviceSpringConf.xml', 'classpath:/dataSourceForTestSpringConf.xml'], testInstance = xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte@8e53f2, testMethod = testCrudCompte@TestServiceGestionCompte, testException = [null]]], class dirties context [false], class mode [null], method dirties context [false].
+2013-12-11 10:57:05,231 DEBUG main org.springframework.test.context.support.DirtiesContextTestExecutionListener - After test class: context [[TestContext@f063ae testClass = TestServiceGestionCompte, locations = array<String>['classpath:/serviceSpringConf.xml', 'classpath:/dataSourceForTestSpringConf.xml'], testInstance = [null], testMethod = [null], testException = [null]]], dirtiesContext [false].
+2013-12-11 10:57:05,237 INFO Thread-3 org.springframework.context.support.GenericApplicationContext - Closing org.springframework.context.support.GenericApplicationContext@f7245d: startup date [Wed Dec 11 10:57:02 CET 2013]; root of context hierarchy
+2013-12-11 10:57:05,237 DEBUG Thread-3 org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+2013-12-11 10:57:05,237 INFO Thread-3 org.springframework.beans.factory.support.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@10e2859: defining beans [jamonGenericProfilerAspectBean,org.springframework.aop.config.internalAutoProxyCreator,execution_methodes_generic_dao,execution_methodes_dao,org.springframework.aop.aspectj.AspectJPointcutAdvisor#0,org.springframework.aop.aspectj.AspectJPointcutAdvisor#1,monitorReportTimerRecorder,scheduledTask,timerFactory,org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,myEmf,txManager,beanConverter,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,daoCompteImpl,gestionComptesImpl,myDataSource]; root of factory hierarchy
+2013-12-11 10:57:05,237 DEBUG Thread-3 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'gestionComptesImpl': [xxx.yyy.zzz.backoffice_test.test.TestServiceGestionCompte]
+2013-12-11 10:57:05,237 DEBUG Thread-3 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'daoCompteImpl': [xxx.yyy.zzz.backoffice_test.test.TestDaoCompteWithGeneric, xxx.yyy.zzz.backoffice_test.test.TestDaoCompte, xxx.yyy.zzz.backoffice_test.test.TestDaoCompteDbUnit, xxx.yyy.zzz.backoffice_test.test.TestDaoCompteWithGenericAndDbUnit]
+2013-12-11 10:57:05,238 DEBUG Thread-3 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name 'myEmf'
+2013-12-11 10:57:05,238 INFO Thread-3 org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'myPersistenceUnit'
+2013-12-11 10:57:05,238 INFO Thread-3 org.hibernate.impl.SessionFactoryImpl - closing
+2013-12-11 10:57:05,238 INFO Thread-4 org.springframework.context.support.GenericApplicationContext - Closing org.springframework.context.support.GenericApplicationContext@1cab724: startup date [Wed Dec 11 10:57:04 CET 2013]; root of context hierarchy
+2013-12-11 10:57:05,239 DEBUG Thread-4 org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+2013-12-11 10:57:05,239 INFO Thread-4 org.springframework.beans.factory.support.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@9fb85c: defining beans [myDataSource,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor]; root of factory hierarchy
+2013-12-11 10:57:05,239 DEBUG Thread-4 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'myDataSource': [xxx.yyy.zzz.backoffice_test.test.TestXmlExport]
+2013-12-11 10:57:05,239 DEBUG Thread-3 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name 'timerFactory'
+2013-12-11 10:57:05,239 INFO Thread-3 org.springframework.scheduling.timer.TimerFactoryBean - Cancelling Timer
+2013-12-11 10:57:05,240 DEBUG Thread-3 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)#2': [(inner bean)#2, org.springframework.aop.aspectj.AspectJPointcutAdvisor#1]
+2013-12-11 10:57:05,240 DEBUG Thread-3 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean '(inner bean)': [(inner bean), org.springframework.aop.aspectj.AspectJPointcutAdvisor#0]

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <adresse codePostal="75000" ville="Par ici" rue="007 rue elle" idAdr="1"/>
+  <infosauth password="mypwd" idAuth="1"/>
+  <client prenom="didier" numClient="1" nom="Defrance" dateNaissance="1969-07-11" ref_adressePrincipale="1" ref_infosAuth="1"/>
+  <compte label="compte courant bis" numCpt="1" solde="1200.0" ref_proprietaire="1"/>
+  <compte label="compte codevi bis" numCpt="2" solde="50.0" ref_proprietaire="1"/>  
+  <operation label="achat xy" montant="-50.0" numOp="1" dateOp="2010-12-24" ref_compte="1"/>
+  <operation label="paye xy" montant="2500.0" numOp="2" dateOp="2010-12-24" ref_compte="1"/>
+</dataset>

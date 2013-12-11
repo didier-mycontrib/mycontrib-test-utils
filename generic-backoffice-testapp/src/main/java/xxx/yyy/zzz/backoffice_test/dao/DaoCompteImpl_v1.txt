@@ -1,0 +1,31 @@
+package fr.d_defrance.contrib.generic_backoffice.test.dao;
+
+import java.util.Collection;
+
+import javax.inject.Named;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+
+import fr.d_defrance.contrib.generic.persistence.AbstractGenericDaoJpaImpl;
+import fr.d_defrance.contrib.generic_backoffice.test.entity._Compte;
+
+@Named
+//@Transactional inherited
+public class DaoCompteImpl extends AbstractGenericDaoJpaImpl<_Compte> implements DaoCompte {
+		
+	@Override //pour preciser @PersistenceContext(unitName="myPersistenceUnit")
+	@PersistenceContext(unitName="myPersistenceUnit") 
+	public void setEntityManager(EntityManager entityManager) {
+		this.entityManager=entityManager;
+	}
+	
+	@Override
+	public Collection<_Compte> findComptesByNumCli(long numCli) {
+		Query q= this.getEntityManager().createQuery("select c from _Compte c where c.proprietaire.numClient= :numCli");
+		q.setParameter("numCli", numCli);
+		return q.getResultList();
+	}
+	
+	
+}
