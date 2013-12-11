@@ -1,0 +1,17 @@
+.span_label { color:blue;display:block;width:40%;float:left;
+              text-align: left;}
+.input_text { color:red;
+              width: 58%;}
+.div_form { border-color: yellow;            
+            border-width: 2px;
+            border-style:solid;
+            margin: 2px;
+            text-align: left;}
+.div_group { border-color: red;            
+            border-width: 2px;
+            border-style:solid;
+            margin-left: 12px;
+           }
+.div_field { background-color: #88ee88; margin: 2px; }
+
+.output_label { }

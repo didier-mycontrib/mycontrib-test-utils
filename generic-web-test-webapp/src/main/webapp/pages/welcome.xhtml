@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<ui:composition template="/templates/common.xhtml">
+
+		<ui:define name="pageTitle">projet jsf</ui:define>
+
+		<ui:define name="pageHeader">welcome.xhtml via facelet (ui:composition)</ui:define>
+
+		<ui:define name="body">
+    		<a href="dynamic_tva.jsf" >tva (with dynamic form)</a><br/>
+    		<a href="dynamic_inscription.jsf" >inscription (with dynamic form)</a><br/>
+    		<a href="essai_style.html" >essai_style</a><br/>
+    		<hr/>
+	    NB: le fichier "templates/common.xhtml" doit comporter <br/>
+	    &lt;f:view&gt; &lt;h:head&gt; ... &lt;/h:head&gt; &lt;h:body&gt; .... &lt;/h:body&gt; &lt;/f:view&gt;  <br/>
+	    pour le bon fonctionnement de richFaces 4	
+	    <hr/>
+	    Cette application est basée sur JSF 2 (Apache MyFaces 2.0.5) et RichFaces 4.0.0 <br/>
+		</ui:define>
+	    
+    	</ui:composition>
+</html>

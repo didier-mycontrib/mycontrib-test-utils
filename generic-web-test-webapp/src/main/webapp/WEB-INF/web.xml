@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>generic-web-test-webapp</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+	 <!-- facelets context param no more needed in JSF2 & richFaces 4 -->
+	 
+  <!-- RichFaces Filter (for ajax4jsf) no more needed (and doesn't exists) in Richfaces 4 -->
+  
+  
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>*.jsf</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <description>Servlet generant dynamiquement le contenu d'une vue d'ihm en fonction des annoations @Dyn...</description>
+    <display-name>HjsDynServlet</display-name>
+    <servlet-name>HjsDynServlet</servlet-name>
+    <servlet-class>org.mycontrib.generic.web.dhjs.HjsDynServlet</servlet-class>
+    <init-param>
+        <description>package au sein dequel seront placees les classes avec @DynView , @Dyn...</description>
+        <param-name>defaultDynHjsModelViewPackage</param-name>
+        <param-value>org.mycontrib.test.generic.web.dhjs.model_view</param-value></init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HjsDynServlet</servlet-name>
+    <url-pattern>/hjsDynServlet</url-pattern> <!-- now with ajax=true param -->
+  </servlet-mapping>
+  
+  
+  
+  <context-param>
+		<param-name>jamonReportLocation</param-name>
+		<param-value>/home/formation/Bureau/temp/profiling/jamonReport.html</param-value>
+	</context-param> 
+  
+   <listener>
+        <listener-class>org.mycontrib.generic.profiler.MonitorReportRecorderListener</listener-class>
+    </listener>
+   
+   
+ <servlet>
+    <servlet-name>jamonadmin</servlet-name>
+    <jsp-file>/pilotage/profiling/jamonadmin.jsp</jsp-file>
+   </servlet>
+   <servlet>
+    <servlet-name>menu</servlet-name>
+    <jsp-file>/pilotage/profiling/menu.jsp</jsp-file>
+   </servlet>
+   <servlet>
+    <servlet-name>exceptions</servlet-name>
+    <jsp-file>/pilotage/profiling/exceptions.jsp</jsp-file>
+   </servlet>
+   <servlet>
+    <servlet-name>sql</servlet-name>
+    <jsp-file>/pilotage/profiling/sql.jsp</jsp-file>
+   </servlet>
+   <servlet>
+    <servlet-name>query</servlet-name>
+    <jsp-file>/pilotage/profiling/query.jsp</jsp-file>
+   </servlet>
+   <servlet>
+     <servlet-name>Mon</servlet-name>
+     <servlet-class>com.jamonapi.Mon</servlet-class>
+   </servlet>
+
+
+  <servlet-mapping>
+    <servlet-name>Mon</servlet-name>
+    <url-pattern>/Mon</url-pattern>
+  </servlet-mapping>
+
+
+  <filter>
+    <filter-name>JAMonFilter</filter-name>
+    <filter-class>com.jamonapi.JAMonFilter</filter-class>
+   </filter> <!-- pour recuperer des mesures de performances
+                  soit via MonitorFactory.getReport() ou ....
+                  soit via jamon.war (autre appli a installer dans tomcat) + jamon.jar dans tomcat/lib -->
+
+   <filter-mapping>
+    <filter-name>JAMonFilter</filter-name>
+    <url-pattern>*.jsf</url-pattern> <!-- ou /* ou ... -->
+  </filter-mapping>
+  
+</web-app>

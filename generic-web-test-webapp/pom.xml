@@ -1,0 +1,212 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.mycontrib.generic.test</groupId>
+  <artifactId>generic-web-test-webapp</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+ <parent>
+    <groupId>org.mycontrib</groupId>
+    <artifactId>mycontrib-java</artifactId>  
+    <version>1.0</version>
+  </parent>
+  
+	
+	<properties>
+   		 
+   		 <org.apache.myfaces.version>2.0.5</org.apache.myfaces.version>
+   	  <org.richfaces.bom.version>4.0.0.Final</org.richfaces.bom.version>
+	</properties>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+                <groupId>org.richfaces</groupId>
+                <artifactId>richfaces-bom</artifactId>
+                <version>${org.richfaces.bom.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+	</dependencyManagement>
+	
+	<dependencies>
+	
+	<dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>   
+            <version>1.0.0.GA</version>
+             <scope>compile</scope>                     
+        </dependency>
+	
+	   <dependency>
+			<groupId>org.mycontrib.generic</groupId>
+             <artifactId>generic-jee-web-utils-core</artifactId>
+             <version>1.0</version>	<!-- <scope>compile</scope> -->
+		</dependency>
+		<dependency>
+			<groupId>org.mycontrib.generic</groupId>
+             <artifactId>generic-jee-web-utils-jsf-impl</artifactId>
+             <version>1.0</version>	<!-- <scope>compile</scope> -->
+		</dependency>
+		
+		<dependency>
+		<groupId>org.mycontrib.generic</groupId>
+ 		<artifactId>generic-monitor-utils</artifactId>
+  		<version>1.0</version>
+  		<scope>compile</scope>
+	</dependency>
+	
+	<dependency>
+	<groupId>com.fdsapi</groupId>
+	<artifactId>fdsapi</artifactId>
+	<!-- used in profiling part of IHM (for jamon api) -->
+	<!-- <version>1.0.4</version> --> <!-- last availabled in version in maven central -->
+	<version>1.2</version> <!-- third party -->
+  </dependency>
+  
+  <dependency>
+      <groupId>oro</groupId>
+      <artifactId>oro</artifactId> <!-- used in profiling part of IHM (for jamon api) -->
+      <version>2.0.8</version> 
+    </dependency>
+		
+		
+		<!-- el-api et jasper-el nécessaire pour Jetty , déjà fourni par Tomcat 
+        NB: el-api est une sous dépendance (transitive) vis a vis de jasper-el 
+            mais elle doit être explicité car avec "provided" pas de propagation implicite -->
+		<!-- el-api en version 1.0 si groupId="javax.el" et en version 6.0.26 si groupId="org.apache.tomcat" ou ... -->
+	
+	  <!-- utile que pour Jetty -->	
+		 <dependency>
+          <groupId>org.apache.tomcat</groupId>
+          <artifactId>el-api</artifactId>
+          <version>6.0.26</version> 
+          <scope>provided</scope> 
+      </dependency>
+    
+    <!-- utile que pour Jetty -->	
+      <dependency>
+        <groupId>org.apache.tomcat</groupId>
+        <artifactId>jasper-el</artifactId>
+        <version>6.0.26</version>
+        <scope>provided</scope>
+      </dependency>
+     
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version> <!-- old: 1.1.2 not for jsf2 -->
+			<scope>compile</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.myfaces.core</groupId>
+			<artifactId>myfaces-api</artifactId>
+			<version>${org.apache.myfaces.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.myfaces.core</groupId>
+			<artifactId>myfaces-impl</artifactId>
+			<version>${org.apache.myfaces.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		
+		<dependency>
+        <groupId>org.richfaces.ui</groupId>
+        <artifactId>richfaces-components-ui</artifactId>        
+    </dependency>
+    <dependency>
+        <groupId>org.richfaces.core</groupId>
+        <artifactId>richfaces-core-impl</artifactId>    
+    </dependency>
+					
+	
+	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+        <groupId>org.codehaus.cargo</groupId>
+        <artifactId>cargo-maven2-plugin</artifactId>
+        <version>1.1.0</version>
+         <!-- waiting for Ctrl-C -->
+         <!-- tomcat6x or tomcat7x (not tomcat6 / tomcat7) -->
+         <!-- installed or remote : ok with tomcat , embedded ok only with Jetty  -->
+         <!-- configuration "existing" nécessaire (en plus de installed) !!! --> 
+        <!-- 
+         <configuration>
+            <wait>true</wait> 
+            <container>
+                 <containerId>tomcat6x</containerId>     
+                  <type>installed</type> 
+                  <home>C:\Prog\java\ServApp\Tomcat_6.0</home>
+                  
+            </container>
+            <configuration>                     
+                      <type>existing</type> 
+                      <home>C:\Prog\java\ServApp\Tomcat_6.0</home>
+            </configuration> 
+       </configuration>
+       -->
+       
+        <!-- NB: les artifacts (référencés içi pour le fonctionnement de jetty) 
+                 doivent être explicitement (si scope="provided") 
+                 ou implicitement (si scope="runtime") présents dans les dépendances du projet 
+                 et pas de version ici (car références vers dépendances avec versions)-->
+        <configuration>
+            <wait>true</wait> 
+            <container>
+                 <containerId>jetty6x</containerId>  
+                 <type>embedded</type> 
+                  <dependencies>
+                     <dependency>
+                      <groupId>org.apache.tomcat</groupId>
+                      <artifactId>el-api</artifactId>
+                    </dependency>
+                     <dependency>
+                        <groupId>org.apache.tomcat</groupId>
+                        <artifactId>jasper-el</artifactId>
+                    </dependency>
+                  </dependencies>
+            </container>
+        </configuration>  
+               
+          
+      </plugin>
+       		
+	  </plugins>	
+    <finalName>generic-web-test-webapp</finalName>
+  </build>
+  
+  
+</project>

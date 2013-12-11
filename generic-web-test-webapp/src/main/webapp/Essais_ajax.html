@@ -1,0 +1,30 @@
+<!DOCTYPE HTML & JAVASCRIPT>
+<html>
+<head> <title>	Essai Ajax </title>
+
+<script language="javascript" src="my_ajax.js">
+</script>
+
+</head>
+<body>
+
+
+<h3> essai Ajax </h3>
+
+<form>
+   categorieId: <select size='1' name='categorieId' value='0' 
+   onChange='refreshViaAjax("hjsDynServlet?ajax=true&bean=selectionBean&newHtmlContentFor=productId","span1",this)'>
+   <option value='1' >[1]CD</option>
+   <option value='2' >[2]DVD</option>
+   <option value='3' >[3]Livre</option>
+   <option value='4' >[4]Divers</option>
+   </select><br/>
+productId: <span id='span1'>span1</span><br/>
+   
+</form>
+
+<hr/>
+<a href="index.html">retour vers index</a>
+</body>
+
+</html>
