@@ -1,0 +1,4 @@
+* debug test dbUnit , reflection avec Date
+* mieux remonter "echec junit" si exception interne test dbUnit
+* trouver eventuellement une astuce pour test dao "crud_en une seule tx"
+  avec techno EJB et withDeep = true

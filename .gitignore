@@ -2,10 +2,17 @@
 Servers/*
 RemoteSystemsTempFiles/*
 */target/*
+*/*/target/*
 */.project
 */.classpath
 */.settings/*
+*/*/.settings/*
 *.class
 *.jar
 *.war
 *.ear
+.project
+.settings
+.classpath
+.prefs
+.metadata

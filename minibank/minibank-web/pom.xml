@@ -1,0 +1,255 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>minibank</artifactId>
+    <groupId>org.mycontrib.generic.test</groupId>
+    <version>1.0-SNAPSHOT</version>
+    <relativePath>..</relativePath>
+  </parent>
+  <artifactId>minibank-web</artifactId>
+  <packaging>war</packaging>
+   <description>ihm web de minibank (jsf 2 + ....)</description>
+  
+  
+  	<properties>
+   		<org.springframework.version>3.1.2.RELEASE</org.springframework.version>
+   		 <org.apache.cxf.version>2.7.0</org.apache.cxf.version>
+   		 <org.apache.myfaces.version>2.1.5</org.apache.myfaces.version>
+   	     <org.richfaces.bom.version>4.2.3.Final</org.richfaces.bom.version>
+	</properties>
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+                <groupId>org.richfaces</groupId>
+                <artifactId>richfaces-bom</artifactId>
+                <version>${org.richfaces.bom.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+	</dependencyManagement>
+	
+	<dependencies>
+	
+	<dependency>
+         <artifactId>minibank-service-impl</artifactId>
+         <groupId>org.mycontrib.generic.test</groupId>
+         <version>1.0-SNAPSHOT</version>
+         <scope>compile</scope>
+     </dependency>
+	
+	
+		
+		<!-- el-api et jasper-el n‚cessaire pour Jetty , d‚j… fourni par Tomcat 
+        NB: el-api est une sous d‚pendance (transitive) vis a vis de jasper-el 
+            mais elle doit etre explicit‚ car avec "provided" pas de propagation implicite -->
+		<!-- el-api en version 1.0 si groupId="javax.el" et en version 6.0.26 si groupId="org.apache.tomcat" ou ... -->
+	
+	  <!-- utile que pour Jetty -->	
+		 <dependency>
+          <groupId>org.apache.tomcat</groupId>
+          <artifactId>el-api</artifactId>
+          <version>6.0.26</version> 
+          <scope>provided</scope> 
+      </dependency>
+    
+    <!-- utile que pour Jetty -->	
+      <dependency>
+        <groupId>org.apache.tomcat</groupId>
+        <artifactId>jasper-el</artifactId>
+        <version>6.0.26</version>
+        <scope>provided</scope>
+      </dependency>
+     
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		
+		
+		<dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>   
+            <version>1.0.0.GA</version>
+             <scope>compile</scope>                     
+        </dependency>
+		
+		<dependency>
+     		<groupId>org.hibernate</groupId>
+     		<artifactId>hibernate-validator</artifactId>
+     		<version>4.3.0.Final</version> 
+	   </dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${org.springframework.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version>${org.springframework.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${org.springframework.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>  
+             <groupId>javax.inject</groupId>  
+             <artifactId>javax.inject</artifactId>  
+             <version>1</version> 
+             <scope>compile</scope> 
+        </dependency>
+		<!--
+		<dependency>
+           <groupId>org.aspectj</groupId>
+           <artifactId>aspectjrt</artifactId>
+           <version>1.6.8</version>
+           <scope>runtime</scope>
+       </dependency> 
+       
+        <dependency>
+           <groupId>org.aspectj</groupId>
+           <artifactId>aspectjweaver</artifactId> 
+           <version>1.6.8</version>
+           <scope>runtime</scope>
+       </dependency>
+       -->
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${org.springframework.version}</version>
+			<scope>compile</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${org.springframework.version}</version>
+			<scope>test</scope>
+		</dependency>
+		
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version> <!-- old: 1.1.2 not for jsf2 -->
+			<scope>compile</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.myfaces.core</groupId>
+			<artifactId>myfaces-api</artifactId>
+			<version>${org.apache.myfaces.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.myfaces.core</groupId>
+			<artifactId>myfaces-impl</artifactId>
+			<version>${org.apache.myfaces.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		  
+	  <!-- how to use myfaces 2.1 , CDI and Spring 3 together ???
+	       in order to use @Inject in jsf ManagedBean ???? -->
+	  <!-- 	  
+		<dependency>  
+			<groupId>org.apache.myfaces.extensions.cdi</groupId>
+			<artifactId>myfaces-extcdi-assembly-jsf20</artifactId>
+			<version>1.0.3</version>
+			<type>pom</type>
+		</dependency>
+		
+		<dependency>
+       		 <groupId>javax.enterprise</groupId>
+        	 <artifactId>cdi-api</artifactId>
+        	 <version>1.0</version> 
+     	 </dependency>
+     	--> 
+     	
+		
+		<dependency>
+        <groupId>org.richfaces.ui</groupId>
+        <artifactId>richfaces-components-ui</artifactId>        
+    </dependency>
+    <dependency>
+        <groupId>org.richfaces.core</groupId>
+        <artifactId>richfaces-core-impl</artifactId>    
+    </dependency>
+		
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-api</artifactId>
+			<version>${org.apache.cxf.version}</version>
+			<scope>compile</scope>			
+		</dependency>
+      
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
+			<version>${org.apache.cxf.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxws</artifactId>
+			<version>${org.apache.cxf.version}</version>
+			<exclusions>
+				<exclusion>
+                    <groupId>asm</groupId>
+                    <artifactId>asm</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.geronimo.specs</groupId>
+    				<artifactId>geronimo-javamail_1.4_spec</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		
+		
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http</artifactId>
+			<version>${org.apache.cxf.version}</version>
+		</dependency>
+				
+	
+	</dependencies>
+	
+	<build>
+	   <finalName>minibank-jpa-web</finalName>
+	</build>
+ 
+  
+  
+</project>

@@ -1,0 +1,91 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.mycontrib.generic.test</groupId>
+    <artifactId>minibank-jee</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>minibank-jee-web</artifactId>
+  <packaging>war</packaging>
+  
+   
+  <properties>
+     <org.richfaces.bom.version>4.1.0.Final</org.richfaces.bom.version>
+  </properties>
+  
+  <dependencyManagement>
+		<dependencies>
+			<dependency>
+                <groupId>org.richfaces</groupId>
+                <artifactId>richfaces-bom</artifactId>
+                <version>${org.richfaces.bom.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+	</dependencyManagement>
+  
+  <dependencies>
+  <dependency>
+      <groupId>org.mycontrib.generic.test</groupId>
+      <artifactId>minibank-jee-ejb</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+    
+    <dependency>
+      <groupId>org.mycontrib.generic.test</groupId>
+      <artifactId>minibank-jee-itf</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+
+<!-- 
+    <dependency>
+      <groupId>javaee</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>5</version>
+      <scope>provided</scope>
+    </dependency>
+-->
+
+<dependency> 
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>6.0</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- 
+		<dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>   
+            <version>1.0.0.GA</version>
+             <scope>compile</scope>                     
+        </dependency>
+		-->
+		<dependency>
+     		<groupId>org.hibernate</groupId>
+     		<artifactId>hibernate-validator</artifactId>
+     		<version>3.0.0.ga</version>  <!--  3.0.0.ga ou 4.0.2.GA  -->
+     		 <scope>provided</scope>  
+	   </dependency>
+	   
+	   
+	   <dependency>
+        <groupId>org.richfaces.ui</groupId>
+        <artifactId>richfaces-components-ui</artifactId>        
+    </dependency>
+    <dependency>
+        <groupId>org.richfaces.core</groupId>
+        <artifactId>richfaces-core-impl</artifactId>    
+    </dependency>
+	   
+	   </dependencies>
+	   
+	   <build>
+	      <finalName>minibank-jee-web</finalName>
+	   </build>
+  
+  
+</project>

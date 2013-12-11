@@ -1,0 +1,73 @@
+2013-12-11 11:37:43,756 DEBUG main org.hibernate.loader.Loader - loading entity: [tp.myapp.minibank.impl.persistence.entity._Client#3]
+2013-12-11 11:37:43,756 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2013-12-11 11:37:43,756 DEBUG main org.hibernate.SQL - select client0_.numClient as numClient0_1_, client0_.ref_adressePrincipale as ref8_0_1_, client0_.dateNaissance as dateNais2_0_1_, client0_.email as email0_1_, client0_.nom as nom0_1_, client0_.password as password0_1_, client0_.prenom as prenom0_1_, client0_.telephone as telephone0_1_, adresse1_.idAdr as idAdr1_0_, adresse1_.codePostal as codePostal1_0_, adresse1_.rue as rue1_0_, adresse1_.ville as ville1_0_ from Client client0_ left outer join Adresse adresse1_ on client0_.ref_adressePrincipale=adresse1_.idAdr where client0_.numClient=?
+2013-12-11 11:37:43,756 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+2013-12-11 11:37:43,757 DEBUG main org.hibernate.loader.Loader - result row: null, EntityKey[tp.myapp.minibank.impl.persistence.entity._Client#3]
+2013-12-11 11:37:43,757 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+2013-12-11 11:37:43,757 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2013-12-11 11:37:43,757 DEBUG main org.hibernate.engine.TwoPhaseLoad - resolving associations for [tp.myapp.minibank.impl.persistence.entity._Client#3]
+2013-12-11 11:37:43,758 DEBUG main org.hibernate.engine.TwoPhaseLoad - done materializing entity [tp.myapp.minibank.impl.persistence.entity._Client#3]
+2013-12-11 11:37:43,758 DEBUG main org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+2013-12-11 11:37:43,758 DEBUG main org.hibernate.loader.Loader - done entity load
+2013-12-11 11:37:43,758 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Initiating transaction commit
+2013-12-11 11:37:43,758 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Committing JPA transaction on EntityManager [org.hibernate.ejb.EntityManagerImpl@69b2bc]
+2013-12-11 11:37:43,758 DEBUG main org.hibernate.transaction.JDBCTransaction - commit
+2013-12-11 11:37:43,758 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - processing flush-time cascades
+2013-12-11 11:37:43,758 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - dirty checking collections
+2013-12-11 11:37:43,758 DEBUG main org.hibernate.engine.Collections - Collection dereferenced: [tp.myapp.minibank.impl.persistence.entity._Client.comptes#3]
+2013-12-11 11:37:43,758 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+2013-12-11 11:37:43,758 DEBUG main org.hibernate.event.def.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 1 removals to 1 collections
+2013-12-11 11:37:43,758 DEBUG main org.hibernate.pretty.Printer - listing entities:
+2013-12-11 11:37:43,758 DEBUG main org.hibernate.pretty.Printer - tp.myapp.minibank.impl.persistence.entity._Client{prenom=alex, comptes=<uninitialized>, dateNaissance=1980-02-11 00:00:00, email=alex.therieur@ici_ou_la, adressePrincipale=null, telephone=0504030201, password=pwd2, nom=therieur, numero=3}
+2013-12-11 11:37:43,758 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2013-12-11 11:37:43,758 DEBUG main org.hibernate.SQL - delete from Client where numClient=?
+2013-12-11 11:37:43,758 DEBUG main org.hibernate.jdbc.AbstractBatcher - Executing batch size: 1
+2013-12-11 11:37:43,758 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2013-12-11 11:37:43,760 DEBUG main org.hibernate.transaction.JDBCTransaction - re-enabling autocommit
+2013-12-11 11:37:43,760 DEBUG main org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+2013-12-11 11:37:43,760 DEBUG main org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+2013-12-11 11:37:43,760 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2013-12-11 11:37:43,760 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [org.hibernate.ejb.EntityManagerImpl@69b2bc] after transaction
+2013-12-11 11:37:43,760 DEBUG main org.springframework.orm.jpa.EntityManagerFactoryUtils - Closing JPA EntityManager
+2013-12-11 11:37:43,760 DEBUG main org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'txManager'
+2013-12-11 11:37:43,760 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Creating new transaction with name [org.mycontrib.generic.persistence.spring.GenericDaoJpaSpring.getEntityById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT,readOnly; ''
+2013-12-11 11:37:43,760 DEBUG main org.hibernate.impl.SessionImpl - opened session at timestamp: 13867582637
+2013-12-11 11:37:43,760 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Opened new EntityManager [org.hibernate.ejb.EntityManagerImpl@8e326e] for JPA transaction
+2013-12-11 11:37:43,760 DEBUG main org.hibernate.transaction.JDBCTransaction - begin
+2013-12-11 11:37:43,760 DEBUG main org.hibernate.jdbc.ConnectionManager - opening JDBC connection
+2013-12-11 11:37:43,760 DEBUG main org.springframework.jdbc.datasource.DriverManagerDataSource - Creating new JDBC DriverManager Connection to [jdbc:mysql://localhost/minibank_db_ex1]
+2013-12-11 11:37:43,764 DEBUG main org.hibernate.transaction.JDBCTransaction - current autocommit status: true
+2013-12-11 11:37:43,764 DEBUG main org.hibernate.transaction.JDBCTransaction - disabling autocommit
+2013-12-11 11:37:43,765 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Not exposing JPA transaction [org.hibernate.ejb.EntityManagerImpl@8e326e] as JDBC transaction because JpaDialect [org.springframework.orm.jpa.DefaultJpaDialect@19632eb] does not support JDBC Connection retrieval
+2013-12-11 11:37:43,765 DEBUG main org.hibernate.loader.Loader - loading entity: [tp.myapp.minibank.impl.persistence.entity._Client#3]
+2013-12-11 11:37:43,765 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open PreparedStatement (open PreparedStatements: 0, globally: 0)
+2013-12-11 11:37:43,765 DEBUG main org.hibernate.SQL - select client0_.numClient as numClient0_1_, client0_.ref_adressePrincipale as ref8_0_1_, client0_.dateNaissance as dateNais2_0_1_, client0_.email as email0_1_, client0_.nom as nom0_1_, client0_.password as password0_1_, client0_.prenom as prenom0_1_, client0_.telephone as telephone0_1_, adresse1_.idAdr as idAdr1_0_, adresse1_.codePostal as codePostal1_0_, adresse1_.rue as rue1_0_, adresse1_.ville as ville1_0_ from Client client0_ left outer join Adresse adresse1_ on client0_.ref_adressePrincipale=adresse1_.idAdr where client0_.numClient=?
+2013-12-11 11:37:43,765 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to open ResultSet (open ResultSets: 0, globally: 0)
+2013-12-11 11:37:43,765 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close ResultSet (open ResultSets: 1, globally: 1)
+2013-12-11 11:37:43,765 DEBUG main org.hibernate.jdbc.AbstractBatcher - about to close PreparedStatement (open PreparedStatements: 1, globally: 1)
+2013-12-11 11:37:43,765 DEBUG main org.hibernate.engine.StatefulPersistenceContext - initializing non-lazy collections
+2013-12-11 11:37:43,765 DEBUG main org.hibernate.loader.Loader - done entity load
+2013-12-11 11:37:43,765 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Initiating transaction commit
+2013-12-11 11:37:43,765 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Committing JPA transaction on EntityManager [org.hibernate.ejb.EntityManagerImpl@8e326e]
+2013-12-11 11:37:43,765 DEBUG main org.hibernate.transaction.JDBCTransaction - commit
+2013-12-11 11:37:43,765 DEBUG main org.hibernate.transaction.JDBCTransaction - re-enabling autocommit
+2013-12-11 11:37:43,765 DEBUG main org.hibernate.transaction.JDBCTransaction - committed JDBC Connection
+2013-12-11 11:37:43,765 DEBUG main org.hibernate.jdbc.ConnectionManager - aggressively releasing JDBC connection
+2013-12-11 11:37:43,765 DEBUG main org.hibernate.jdbc.ConnectionManager - releasing JDBC connection [ (open PreparedStatements: 0, globally: 0) (open ResultSets: 0, globally: 0)]
+2013-12-11 11:37:43,765 DEBUG main org.springframework.orm.jpa.JpaTransactionManager - Closing JPA EntityManager [org.hibernate.ejb.EntityManagerImpl@8e326e] after transaction
+2013-12-11 11:37:43,765 DEBUG main org.springframework.orm.jpa.EntityManagerFactoryUtils - Closing JPA EntityManager
+2013-12-11 11:37:43,765 INFO main org.mycontrib.generic.test.GenericDaoTest - 	 entite bien supprimee
+2013-12-11 11:37:43,766 INFO main org.mycontrib.generic.test.GenericDaoTest - ****** end of CRUD test avec plusieurs petites transactions *****
+
+2013-12-11 11:37:43,767 DEBUG main org.springframework.test.context.support.DirtiesContextTestExecutionListener - After test method: context [[TestContext@1090a2e testClass = TestClientDaoWithGenericAndDbUnit, testInstance = tp.myapp.minibank.impl.persistence.dao.test.TestClientDaoWithGenericAndDbUnit@caba7f, testMethod = testGenericDao_CRUD@GenericDaoTest, testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1088a5f testClass = TestClientDaoWithGenericAndDbUnit, locations = '{classpath:/serviceSpringConf.xml, classpath:/dataSourceForTestSpringConf.xml}', classes = '{}', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader']]], class dirties context [false], class mode [null], method dirties context [false].
+2013-12-11 11:37:43,767 DEBUG main org.springframework.test.context.support.DirtiesContextTestExecutionListener - After test class: context [[TestContext@1090a2e testClass = TestClientDaoWithGenericAndDbUnit, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [MergedContextConfiguration@1088a5f testClass = TestClientDaoWithGenericAndDbUnit, locations = '{classpath:/serviceSpringConf.xml, classpath:/dataSourceForTestSpringConf.xml}', classes = '{}', activeProfiles = '{}', contextLoader = 'org.springframework.test.context.support.DelegatingSmartContextLoader']]], dirtiesContext [false].
+2013-12-11 11:37:43,769 INFO Thread-2 org.springframework.context.support.GenericApplicationContext - Closing org.springframework.context.support.GenericApplicationContext@14d82e1: startup date [Wed Dec 11 11:37:41 CET 2013]; root of context hierarchy
+2013-12-11 11:37:43,769 DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Returning cached instance of singleton bean 'lifecycleProcessor'
+2013-12-11 11:37:43,769 INFO Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@e2ad16: defining beans [org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor#0,myEmf,txManager,org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,beanConverter,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,org.springframework.context.annotation.internalPersistenceAnnotationProcessor,gestionComptesImpl,gestionClientsImpl,compteDaoJpa,clientDaoJpa,myDataSource,org.springframework.context.annotation.ConfigurationClassPostProcessor$ImportAwareBeanPostProcessor#0]; root of factory hierarchy
+2013-12-11 11:37:43,769 DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'gestionClientsImpl': [tp.myapp.minibank.impl.domain.service.test.TestGestionClients]
+2013-12-11 11:37:43,770 DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'clientDaoJpa': [tp.myapp.minibank.impl.persistence.dao.test.TestClientDaoWithGenericAndDbUnit]
+2013-12-11 11:37:43,770 DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'gestionComptesImpl': [tp.myapp.minibank.impl.domain.service.test.TestGestionComptes]
+2013-12-11 11:37:43,770 DEBUG Thread-2 org.springframework.beans.factory.support.DefaultListableBeanFactory - Retrieved dependent beans for bean 'compteDaoJpa': [tp.myapp.minibank.impl.persistence.dao.test.TestCompteDaoWithGenericAndDbUnit]
+2013-12-11 11:37:43,770 DEBUG Thread-2 org.springframework.beans.factory.support.DisposableBeanAdapter - Invoking destroy() on bean with name 'myEmf'
+2013-12-11 11:37:43,770 INFO Thread-2 org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'myPersistenceUnit'
+2013-12-11 11:37:43,770 INFO Thread-2 org.hibernate.impl.SessionFactoryImpl - closing

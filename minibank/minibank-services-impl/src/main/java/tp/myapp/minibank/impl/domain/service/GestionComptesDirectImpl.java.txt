@@ -1,0 +1,133 @@
+package tp.myapp.minibank.impl.domain.service;
+
+import java.util.List;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+import javax.jws.WebService;
+
+import org.mycontrib.generic.exception.GenericException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.transaction.annotation.Transactional;
+
+import tp.myapp.minibank.impl.persistence.dao.CompteDao;
+import tp.myapp.minibank.impl.persistence.entity._Compte;
+import tp.myapp.minibank.impl.persistence.entity._Operation;
+import tp.myapp.minibank.itf.domain.dto.Compte;
+import tp.myapp.minibank.itf.domain.dto.Operation;
+import tp.myapp.minibank.itf.domain.service.GestionComptes;
+
+/* version du service GestionCompte sans copie complete de entite/DTO 
+ * mais avec aller/retour plus direct (possible via heritage )
+ * 
+ * NB: cette classe a été temporairement codée pour valider le principe
+ * "entity inherits of dto" et "return directly list of entity as list of dto"
+ * Maintenant qu'il existe une version "optimized" du beanConverter qui effectue
+ * ce même travail , il vaut mieux garder le style de code habituel
+ * 
+ */
+
+
+@Named
+@Transactional()
+@WebService(targetNamespace="http://tp.myapp.minibank/",
+endpointInterface="tp.myapp.minibank.itf.domain.service.GestionComptes")
+public class GestionComptesDirectImpl implements GestionComptes {
+	
+	private static Logger logger = LoggerFactory.getLogger(GestionComptesDirectImpl.class);
+	
+	@Inject
+	private CompteDao compteDao;
+	
+	@Transactional(readOnly=true)
+	public Compte getCompteByNum(long numCpt) throws GenericException {
+		Compte c=null;
+		try {
+			c=  compteDao.getEntityById(numCpt); /* type d'entité _Compte compatible avec classe parente de DTO Compte */
+		} catch (Exception e) {
+			//e.printStackTrace();
+			throw new GenericException("echec getCompteByNum",e);
+		}
+		return c;
+	}
+
+	@Override
+	@Transactional(readOnly=true)
+	public List<Compte> getComptesOfClient(long numClient)
+			throws GenericException {		
+		List<Compte> listeCpt = null;
+		try {
+			listeCpt = (List) compteDao.findComptesByNumCli(numClient);
+			//listeCpt= entityListAsCompteDtoList(compteDao.findComptesByNumCli(numClient));
+		} catch (Exception e) {
+			logger.error("echec GestionComptesImpl.getComptesOfClient",e);
+			throw new GenericException("echec GestionComptesImpl.getComptesOfClient",e);
+		}
+		return listeCpt;
+	}
+	
+	public List<Compte> getComptesOfClientWithoutWarning(long numClient)
+			throws GenericException {		
+		List<Compte> listeCpt = null;
+		try {
+			listeCpt= entityListAsCompteDtoList(compteDao.findComptesByNumCli(numClient));
+		} catch (Exception e) {
+			logger.error("echec GestionComptesImpl.getComptesOfClient",e);
+			throw new GenericException("echec GestionComptesImpl.getComptesOfClient",e);
+		}
+		return listeCpt;
+	}
+    
+	
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	private List<Compte> entityListAsCompteDtoList(List<_Compte> liste){
+		//NB: List<_Compte> may be returned as List<Compte> because _Compte inherits of Compte
+		return (List) liste;
+	}
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	private List<Operation> entityListAsOperationDtoList(List<_Operation> liste){
+		//NB: List<_Compte> may be returned as List<Operation> because _Operation inherits of Operation
+		return (List) liste;
+	}
+	
+
+
+	@Override
+	public void transferer(double montant, long numCptDeb, long numCptCred)
+			throws GenericException {
+		try {
+			_Compte cptDeb = compteDao.getEntityById(numCptDeb);
+			cptDeb.setSolde(cptDeb.getSolde() - montant);
+			cptDeb.addOperation(new _Operation("debit virement",-montant));
+			//compteDao.updateEntity(cptDeb);//inutile si cptDeb est persistant (du fait de @Transactional)
+			_Compte cptCred = compteDao.getEntityById(numCptCred);
+			cptCred.setSolde(cptCred.getSolde() + montant);
+			cptCred.addOperation(new _Operation("credit virement",+montant));
+			//compteDao.updateEntity(cptCred);//inutile si cptCred est persistant (du fait de @Transactional)
+		} catch (Exception e) {
+			logger.error("echec GestionComptesImpl.transferer",e);
+			throw new GenericException("echec GestionComptesImpl.transferer",e);
+		}
+
+	}
+
+	@Transactional(readOnly=true)
+	public List<Operation> getOperationsOfCompte(long numCpt)
+			throws GenericException {
+		List<Operation> listeOp = null;
+		try {
+			_Compte cpt= compteDao.getEntityById(numCpt);
+			cpt.getOperations().size();//to avoid outside lazy exception
+			listeOp = (List) cpt.getOperations();
+			//listeOp=entityListAsOperationDtoList(cpt.getOperations());
+		} catch (Exception e) {
+			logger.error("echec GestionComptesImpl.getOperationsOfCompte",e);
+			throw new GenericException("echec GestionComptesImpl.getgetOperationsOfCompte",e);
+		}
+		return listeOp;
+	}
+
+}

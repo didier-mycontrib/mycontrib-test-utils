@@ -1,0 +1,17 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/common.xhtml">
+<ui:define name="pageTitle">welcome</ui:define>
+<ui:define name="pageHeader">Minibank Web (JSF2-facelet, JEE6/EJB 3.1)</ui:define>
+<ui:define name="body">
+    <a href="../../minibank-jee-ejb/GestionComptesImpl?wsdl"> wsdl service WEB "GestionComptes" (EJB3.1)</a> <br/>
+	<a href="../../minibank-jee-ejb/GestionClientsImpl?wsdl"> wsdl service WEB "GestionClients" (EJB3.1)</a>
+	<hr/>
+	<a href="identificationClient.jsf"> identification client</a> <br/>
+	<a href="cdi-test.jsf"> test cdi (jsr299)</a> <br/>
+</ui:define>
+</ui:composition>
+</html>
